@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.RegistrazioneVeicoloController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #4863A0;">
+         <children>
+            <Label layoutX="196.0" layoutY="17.0" text="Aggiungi Veicolo" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtmarca" layoutX="45.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Marca" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtmodello" layoutX="278.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Modello" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtassi" layoutX="45.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtpeso" layoutX="278.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtaltezza" layoutX="514.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="45.0" layoutY="300.0" text="Inserire Anno di Immatricolazione (formato: AAAA-MM-GG):" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtanno" layoutX="46.0" layoutY="337.0" prefHeight="44.0" prefWidth="210.0" promptText="Anno" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="45.0" layoutY="418.0" text="Inserire la Targa e Classe del veicolo:" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttarga" layoutX="46.0" layoutY="460.0" prefHeight="44.0" prefWidth="210.0" promptText="Targa" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="330.0" layoutY="461.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Classe A" />
+          <MenuItem mnemonicParsing="false" text="Classe B" />
+            <MenuItem mnemonicParsing="false" text="Classe C" />
+            <MenuItem mnemonicParsing="false" text="Classe 4" />
+            <MenuItem mnemonicParsing="false" text="Classe 5" />
+        </items>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </MenuButton>
+      <Button fx:id="bottone_conferma2" layoutX="649.0" layoutY="538.0" mnemonicParsing="false" onAction="#conferma_registrazione_veicolo" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="bottone_indietro2" layoutX="28.0" layoutY="536.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
