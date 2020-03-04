@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label prefHeight="83.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <font>
@@ -56,7 +56,7 @@
             <Font name="Calibri Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="bottone_conferma" layoutX="476.0" layoutY="393.0" mnemonicParsing="false" onAction="#conferma_registrazione" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
+      <Button fx:id="bottone_conferma" layoutX="476.0" layoutY="393.0" mnemonicParsing="false" onAction="#conferma_tariffa" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
