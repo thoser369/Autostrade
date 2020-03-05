@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 
-public class Autostrade {
+public class Autostrada {
 	 ArrayList<Casello> autostrada;
 	   
 		public Autostrada() {

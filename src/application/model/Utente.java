@@ -4,9 +4,10 @@ public class Utente {
  
 	String nome;
 	String cognome;
+	String genere;
 	String citta_nascita;
 	String data_nascita;
-	String email;
+	String username;
 	String password;
 	String tipo;
 	
@@ -28,6 +29,12 @@ public String getCognome() {
 public String setCognome(String n) {
 	return this.cognome=n;
 }
+public String getGenere() {
+	return this.genere;
+}
+public String setGenere(String n) {
+	return this.genere=n;
+}
 public String getCittaNascita() {
 	return this.citta_nascita;
 }
@@ -40,11 +47,11 @@ public String getDataNascita() {
 public String setDataNascita(String n) {
 	return this.data_nascita=n;
 }
-public String getEmail() {
-	return this.email;
+public String getUserName() {
+	return this.username;
 }
-public String setEmail(String n) {
-	return this.email=n;
+public String setUsername(String n) {
+	return this.username=n;
 }
 public String getPassword() {
 	return this.password;
