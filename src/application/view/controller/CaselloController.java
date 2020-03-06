@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 
 public class CaselloController {
 
-	    @FXML
+	 @FXML
 	    private Button bottone_indietro;
 
 	    @FXML
@@ -70,12 +70,9 @@ public class CaselloController {
 	    private TextField txt32;
 
 	    @FXML
-	    private Button bottone_tratte;
-
-	    @FXML
 	    private Button bottone_aggiungiCasello;
 
-	 	@FXML
+	    @FXML
 	    void indietro(ActionEvent event) {
 
 	    }

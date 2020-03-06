@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.GestioneAutostradeController">
    <children>
       <Label prefHeight="83.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <font>
@@ -18,17 +17,17 @@
             <Font name="Calibri Bold Italic" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="108.0" layoutY="126.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A14">
+      <Button fx:id="bottone_A14" layoutX="108.0" layoutY="126.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A14">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="401.0" layoutY="126.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A24">
+      <Button fx:id="bottone_A24" layoutX="393.0" layoutY="126.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A24">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="249.0" layoutY="240.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A25">
+      <Button fx:id="bottone_A25" layoutX="108.0" layoutY="240.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="A25">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
@@ -38,5 +37,10 @@
             <Font name="Cambria Italic" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="bottone_tratte" layoutX="393.0" layoutY="240.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="Tratte">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
