@@ -42,14 +42,14 @@ public class HomeUtenteController {
     		            bottone_veicolo.setEffect(null);
     		        }
     		});
-    	FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/application/view/fxml/RegistrazioneVeicolo.fxml"));
-        AnchorPane root = (AnchorPane) loader.load();
-      Scene scene= new Scene(root);
-      Stage window= (Stage)((Node)event.getSource()).getScene().getWindow();
-      window.setScene(scene);
-      window.setTitle("Registrazione Veicolo");
-      window.show();
+    	((Node)event.getSource()).getScene().getWindow().hide(); 
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/RegistrazioneVeicolo.fxml").openStream());
+		Scene scene = new Scene(root);							
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Registrazione Veicolo");
+		primaryStage.show();	
     	
 
     }

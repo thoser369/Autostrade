@@ -84,6 +84,7 @@ public class RegistrazioneController {
     	  		  AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/Login.fxml").openStream());
     	  		  Scene scene = new Scene(root);							
     	  		  primaryStage.setScene(scene);
+    	  		  primaryStage.setTitle("Login");
     	  		  primaryStage.show();	
     	    } else {
     		         txtusername.setStyle("-fx-border-color: red");
@@ -102,6 +103,7 @@ public class RegistrazioneController {
 		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/Login.fxml").openStream());
 		Scene scene = new Scene(root);							
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Login");
 		primaryStage.show();
     }
 

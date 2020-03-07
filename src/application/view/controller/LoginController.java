@@ -21,8 +21,6 @@ import javafx.stage.Stage;
 public class LoginController {
 	
 	UtenteController uc= new UtenteController();
-
-
 	@FXML
     private TextField utentefield;
 
@@ -47,10 +45,10 @@ public class LoginController {
 		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/HomeUtente.fxml").openStream());
 		Scene scene = new Scene(root);							
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Home");
 		primaryStage.show();	
-	      HomeUtenteController controller = 
-	    		    loader.<HomeUtenteController>getController();
-	    		  controller.passaggio_username(utente);
+	    HomeUtenteController controller = loader.<HomeUtenteController>getController();
+	    controller.passaggio_username(utente);
 	    } else {
 	    	utentefield.setStyle("-fx-border-color: red");
 	    	passwordfield.setStyle("-fx-border-color: red");
@@ -67,6 +65,7 @@ public class LoginController {
 		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/Registrazione.fxml").openStream());
 		Scene scene = new Scene(root);							
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Registrazione");
 		primaryStage.show();	
        
     }
