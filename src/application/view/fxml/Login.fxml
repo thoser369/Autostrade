@@ -9,46 +9,50 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.LoginController">
    <children>
-      <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1569C7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="216.0" layoutY="149.0" prefHeight="203.0" prefWidth="376.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20;">
          <children>
-            <Pane layoutX="212.0" layoutY="203.0" prefHeight="203.0" prefWidth="376.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20;">
-               <children>
-                  <Label layoutX="29.0" layoutY="52.0" prefHeight="22.0" prefWidth="79.0" text="Utente">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="29.0" layoutY="135.0" text="Password">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="utentefield" layoutX="136.0" layoutY="46.0" prefHeight="25.0" prefWidth="219.0" promptText="inserire nome utente" style="-fx-border-style: solid; -fx-border-color: #000000;" />
-                  <PasswordField fx:id="passwordfield" layoutX="136.0" layoutY="129.0" prefHeight="25.0" prefWidth="219.0" promptText="inserire password" style="-fx-border-style: solid; -fx-border-color: #000000;" />
-               </children>
-            </Pane>
-            <Button fx:id="bottone_login" layoutX="222.0" layoutY="472.0" mnemonicParsing="false" onAction="#initialize" prefHeight="11.0" prefWidth="136.0" style="-fx-background-color: #B4CFEC; -fx-border-color: black; -fx-border-width: 2 2 2 2; -fx-border-radius: 5; -fx-background-radius: 5;" text="Login" textOverrun="WORD_ELLIPSIS">
+            <Label layoutX="29.0" layoutY="52.0" prefHeight="22.0" prefWidth="79.0" text="Utente">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Arial Bold" size="18.0" />
                </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Button>
-            <Pane layoutX="10.0" layoutY="20.0" prefHeight="75.0" prefWidth="780.0" style="-fx-background-color: #E66C2C; -fx-border-radius: 10; -fx-background-radius: 10;" />
-            <Button fx:id="bottone_registrati" layoutX="460.0" layoutY="474.0" mnemonicParsing="false" onAction="#registrazione" prefHeight="40.0" prefWidth="136.0" text="Registrati">
+            </Label>
+            <Label layoutX="29.0" layoutY="135.0" text="Password">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Arial Bold" size="18.0" />
                </font>
-            </Button>
-            <Label layoutX="400.0" layoutY="448.0" text="Non sei ancora registrato?" textFill="WHITE">
+            </Label>
+            <TextField fx:id="utentefield" layoutX="136.0" layoutY="41.0" prefHeight="44.0" prefWidth="219.0" promptText="inserire nome utente" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+            <PasswordField fx:id="passwordfield" layoutX="136.0" layoutY="125.0" prefHeight="44.0" prefWidth="219.0" promptText="inserire password" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+         </children>
+      </Pane>
+      <Pane prefHeight="105.0" prefWidth="807.0" style="-fx-background-color: #4863A0;">
+         <children>
+            <Label layoutX="306.0" layoutY="16.0" text="ACCEDI" textFill="WHITE">
                <font>
-                  <Font name="Calibri Bold" size="18.0" />
+                  <Font name="Calibri Bold" size="64.0" />
                </font>
             </Label>
          </children>
       </Pane>
+      <Button fx:id="bottone_login" layoutX="226.0" layoutY="377.0" mnemonicParsing="false" onAction="#initialize" prefHeight="44.0" prefWidth="356.0" style="-fx-background-color: #306EFF;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="bottone_registrati" layoutX="337.0" layoutY="485.0" mnemonicParsing="false" onAction="#registrazione" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #4AA02C;" text="Registrati" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="306.0" layoutY="451.0" text="Non sei ancora registrato?">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

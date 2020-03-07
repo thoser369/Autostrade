@@ -40,7 +40,7 @@ public class LoginController {
     	String utente= utentefield.getText();
     	String password=passwordfield.getText();
     	if(uc.verifica_utente_password(utente, password)){
-    	uc.get(utente, password);
+    	uc.login(utente, password);
     	((Node)event.getSource()).getScene().getWindow().hide(); 
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
@@ -71,7 +71,4 @@ public class LoginController {
        
     }
    
-   /* public void setMain(Main main) {
-        this.main = main;
-    }*/
 }

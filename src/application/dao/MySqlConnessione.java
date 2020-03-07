@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MySQLDaoDatabase extends DAODatabase{
+public class MySqlConnessione extends Connessione{
 	
 	public static Connection createConnection() {
        	Connection cn = null;
@@ -19,14 +19,9 @@ public class MySQLDaoDatabase extends DAODatabase{
         return cn;
     }
 
-	public MySQLDaoDatabase() {
+	public MySqlConnessione() {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public DAOUtente getDAOUtente() {
-		// TODO Auto-generated method stub
-		return new MySqlUtente();
-	}
 
 }

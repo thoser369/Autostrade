@@ -1,7 +1,5 @@
 package application.controller;
 
-import application.dao.DAODatabase;
-import application.dao.DAOUtente;
 import application.dao.MySqlUtente;
 import application.model.Utente;
 
@@ -16,15 +14,15 @@ public class UtenteController {
 		return new UtenteController();
 		}
 		
-		public Utente get(String username, String pwd) {
-			return daoutente.getLogin(username, pwd);
+		public Utente login(String username, String pwd) {
+			return daoutente.Login(username, pwd);
 		}
 		public void a(String username, String pwd) {
 			 daoutente.getA(username, pwd);
 			 //System.out.print("ciao");
 		}
-		public boolean reg(String nome, String cognome, String username, String pwd) {
-			 return daoutente.getRegistrazione(nome, cognome, username, pwd);
+		public boolean registrazione(String nome, String cognome, String username, String pwd) {
+			 return daoutente.Registrazione(nome, cognome, username, pwd);
 		}
 		public boolean verifica_utente(String username) {
 			return daoutente.verifica_utente(username);

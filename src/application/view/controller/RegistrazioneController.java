@@ -9,7 +9,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -17,7 +16,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
-import application.Main;
 import application.controller.UtenteController;
 
 public class RegistrazioneController {
@@ -38,18 +36,6 @@ public class RegistrazioneController {
     private PasswordField txtpwd2;
 
     @FXML
-    private TextField txtdatanascita;
-    
-    @FXML
-    private TextField txtcittanascita;
-
-    @FXML
-    private RadioButton ru;
-
-    @FXML
-    private RadioButton rd;
-
-    @FXML
     private Button bottone_conferma;
     
     @FXML
@@ -58,16 +44,23 @@ public class RegistrazioneController {
     UtenteController uc= new UtenteController();
 
     @FXML
-    void conferma_registrazione(ActionEvent event) throws SQLException {
+    void conferma_registrazione(ActionEvent event) throws SQLException, IOException {
     	String nome=txtnome.getText();
     	String cognome=txtcognome.getText();
     	String username= txtusername.getText();
     	String password= txtpwd1.getText();
     	String password1=txtpwd2.getText();
     	
+    	//controllo campi vuoti
+    	
+    	if(nome.equals("")|cognome.equals("")|username.equals("")|password.equals("")) {
+			Alert alert = new Alert(AlertType.ERROR, "Riempire tutti i campi.");
+			alert.showAndWait();
+    	}
+    	
     	//controllo password
     	
-    	if (!(password.equals(password1))) {
+    	else if (!(password.equals(password1))) {
 			txtpwd1.setStyle("-fx-border-color: red");
 			txtpwd2.setStyle("-fx-border-color: red");
 			Alert alert = new Alert(AlertType.ERROR, "Le due password non corrispondono. Riprovare.");
@@ -81,7 +74,17 @@ public class RegistrazioneController {
 			      txtusername.setStyle("-fx-border-color:  #4AA02C");
 			      txtpwd1.setStyle("-fx-border-color:  #4AA02C");
 			      txtpwd2.setStyle("-fx-border-color:  #4AA02C");
-    	          uc.reg(nome, cognome, username, password);
+    	          uc.registrazione(nome, cognome, username, password);
+    	          txtusername.setStyle("-fx-border-color: #4AA02C");
+			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione avvenuta corretamente. Accedere per continuare.");
+			      alert.showAndWait();
+    	          ((Node)event.getSource()).getScene().getWindow().hide(); 
+    	  		  Stage primaryStage = new Stage();
+    	  		  FXMLLoader loader = new FXMLLoader();
+    	  		  AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/Login.fxml").openStream());
+    	  		  Scene scene = new Scene(root);							
+    	  		  primaryStage.setScene(scene);
+    	  		  primaryStage.show();	
     	    } else {
     		         txtusername.setStyle("-fx-border-color: red");
 			         Alert alert = new Alert(AlertType.ERROR, "Il nome utente risulta gia in uso. Riprovare.");

@@ -1,6 +1,5 @@
 package application.dao;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,12 +14,12 @@ public class MySqlUtente implements DAOUtente {
 	private static final String VERIFICA_UTENTE="SELECT * FROM utente WHERE username=?";
 	
 	@Override
-    public Utente getLogin(String username, String pwd){
+    public Utente Login(String username, String pwd){
 		Utente nuovoutente= new Utente();
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySQLDaoDatabase.createConnection();
+		cn=MySqlConnessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_LOGIN);
 			pst.setString(1, username);
@@ -35,21 +34,15 @@ public class MySqlUtente implements DAOUtente {
 			cn.close();}catch (SQLException e)	{
 			e.printStackTrace();
 		} 
-		//finally {
-			// if (rst != null) try { rst.close(); } catch (SQLException ignore) {}
-			// if (pst != null) try { pst.close(); } catch (SQLException ignore) {}
-			 //if (cn != null) try { cn.close(); } catch (SQLException ignore) {}
-				//}
 		
 		return nuovoutente;
     }
 	@Override
-	public boolean getRegistrazione(String nome, String cognome, String username, String pwd){
+	public boolean Registrazione(String nome, String cognome, String username, String pwd){
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		//ResultSet rst=null;
-		cn=MySQLDaoDatabase.createConnection();
+		cn=MySqlConnessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_REGISTRAZIONE);
 			pst.setString(1,nome);
@@ -73,7 +66,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySQLDaoDatabase.createConnection();
+		cn=MySqlConnessione.createConnection();
 		try {
 			pst=cn.prepareStatement(VERIFICA_UTENTE);
 			pst.setString(1, username);
@@ -93,7 +86,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySQLDaoDatabase.createConnection();
+		cn=MySqlConnessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_LOGIN);
 			pst.setString(1, utente);
