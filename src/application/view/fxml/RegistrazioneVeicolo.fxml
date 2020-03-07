@@ -65,13 +65,13 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="330.0" layoutY="461.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
+      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="330.0" layoutY="461.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
         <items>
-          <MenuItem mnemonicParsing="false" text="Classe A" />
-          <MenuItem mnemonicParsing="false" text="Classe B" />
-            <MenuItem mnemonicParsing="false" text="Classe C" />
-            <MenuItem mnemonicParsing="false" text="Classe 4" />
-            <MenuItem mnemonicParsing="false" text="Classe 5" />
+          <MenuItem fx:id="classeA" mnemonicParsing="false" onAction="#classeA_selezionata" text="Classe A" />
+          <MenuItem fx:id="classeB" mnemonicParsing="false" onAction="#classeB_selezionata" text="Classe B" />
+            <MenuItem fx:id="classeC" mnemonicParsing="false" onAction="#classeC_selezionata" text="Classe C" />
+            <MenuItem fx:id="classe4" mnemonicParsing="false" onAction="#classe4_selezionata" text="Classe 4" />
+            <MenuItem fx:id="classe5" mnemonicParsing="false" onAction="#classe5_selezionata" text="Classe 5" />
         </items>
          <font>
             <Font size="18.0" />

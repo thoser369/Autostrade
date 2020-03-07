@@ -2,7 +2,6 @@ package application.view.controller;
 
 import java.io.IOException;
 
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -55,7 +54,7 @@ public class HomeUtenteController {
     }
 
     @FXML
-    void calcolo_pedaggio(ActionEvent event) {
+    void calcolo_pedaggio(ActionEvent event) throws IOException {
     	bottone_pedaggio.addEventHandler(MouseEvent.MOUSE_ENTERED, 
     		    new EventHandler<MouseEvent>() {
     		        @Override public void handle(MouseEvent e) {
@@ -67,7 +66,14 @@ public class HomeUtenteController {
     		            bottone_pedaggio.setEffect(null);
     		        }
     		});
-
+    	((Node)event.getSource()).getScene().getWindow().hide(); 
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/CalcoloDelPedaggio.fxml").openStream());
+		Scene scene = new Scene(root);							
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Calcolo del pedaggio");
+		primaryStage.show();
     }
     //passaggio di parametri (username)
     public void passaggio_username(String utente) {

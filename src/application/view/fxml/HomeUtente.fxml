@@ -20,7 +20,7 @@
                   <Font name="Calibri Bold" size="64.0" />
                </font>
             </Label>
-            <Button fx:id="bottone_indietro2" layoutX="686.0" layoutY="64.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Log-out" textFill="#4863a0">
+            <Button layoutX="686.0" layoutY="64.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Log-out" textFill="#4863a0">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
