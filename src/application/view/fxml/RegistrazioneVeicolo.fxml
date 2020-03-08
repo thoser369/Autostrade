@@ -5,67 +5,69 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.RegistrazioneVeicoloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.RegistrazioneVeicoloController">
    <children>
-      <Pane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #4863A0;">
+      <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <children>
-            <Label layoutX="196.0" layoutY="17.0" text="Aggiungi Veicolo" textFill="WHITE">
+            <Label layoutX="173.0" layoutY="16.0" text="Aggiungi Veicolo" textFill="WHITE">
                <font>
-                  <Font name="Calibri Bold" size="64.0" />
+                  <Font name="Calibri Bold Italic" size="50.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <TextField fx:id="txtmarca" layoutX="45.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Marca" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtmarca" layoutX="28.0" layoutY="110.0" prefHeight="44.0" prefWidth="210.0" promptText="Marca" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtmodello" layoutX="278.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Modello" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtmodello" layoutX="263.0" layoutY="110.0" prefHeight="44.0" prefWidth="210.0" promptText="Modello" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtassi" disable="true" layoutX="514.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtassi" disable="true" layoutX="498.0" layoutY="110.0" prefHeight="44.0" prefWidth="120.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtpeso" layoutX="46.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtpeso" layoutX="28.0" layoutY="177.0" prefHeight="44.0" prefWidth="210.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtaltezza" layoutX="400.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtaltezza" layoutX="320.0" layoutY="177.0" prefHeight="44.0" prefWidth="210.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="45.0" layoutY="300.0" text="Inserire Anno di Immatricolazione:" textFill="#4863a0">
+      <Label layoutX="25.0" layoutY="248.0" text="Inserire Anno di Immatricolazione:" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtanno" layoutX="46.0" layoutY="337.0" prefHeight="44.0" prefWidth="210.0" promptText="Anno" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtanno" layoutX="25.0" layoutY="279.0" prefHeight="44.0" prefWidth="210.0" promptText="Anno" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="45.0" layoutY="418.0" text="Inserire la Targa e Classe del veicolo:" textFill="#4863a0">
+      <Label layoutX="28.0" layoutY="335.0" text="Inserire la Targa e Classe del veicolo:" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txttarga" layoutX="46.0" layoutY="460.0" prefHeight="44.0" prefWidth="210.0" promptText="Targa" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txttarga" layoutX="28.0" layoutY="368.0" prefHeight="44.0" prefWidth="210.0" promptText="Targa" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="330.0" layoutY="461.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
+      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="309.0" layoutY="368.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
         <items>
           <MenuItem fx:id="classeA" mnemonicParsing="false" onAction="#classeA_selezionata" text="Classe A" />
           <MenuItem fx:id="classeB" mnemonicParsing="false" onAction="#classeB_selezionata" text="Classe B" />
@@ -77,25 +79,30 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <Button fx:id="bottone_conferma2" layoutX="649.0" layoutY="538.0" mnemonicParsing="false" onAction="#conferma_registrazione_veicolo" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
+      <Button fx:id="bottone_conferma2" layoutX="498.0" layoutY="422.0" mnemonicParsing="false" onAction="#conferma_registrazione_veicolo" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="bottone_indietro2" layoutX="28.0" layoutY="536.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+      <Button fx:id="bottone_indietro2" layoutX="28.0" layoutY="422.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="262.0" layoutY="229.0" text="(in kg)" textFill="#4863a0">
+      <Label layoutX="246.0" layoutY="199.0" text="(in kg)" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="623.0" layoutY="229.0" text="(in cm)" textFill="#4863a0">
+      <Label layoutX="540.0" layoutY="199.0" text="(in cm)" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
+      <ImageView fitHeight="89.0" fitWidth="120.0">
+         <image>
+            <Image url="@Logo.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
