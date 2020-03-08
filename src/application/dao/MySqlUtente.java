@@ -28,9 +28,7 @@ public class MySqlUtente implements DAOUtente {
 			if (rst.next()){
 				nuovoutente.setUsername(rst.getString("username"));
 				nuovoutente.setPassword(rst.getString("password"));	
-		}   else {
-			nuovoutente.setPassword("Password errata");
-		}
+		}  
 			cn.close();}catch (SQLException e)	{
 			e.printStackTrace();
 		} 

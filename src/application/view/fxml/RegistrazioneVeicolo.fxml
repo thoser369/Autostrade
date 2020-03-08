@@ -30,22 +30,22 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtassi" layoutX="45.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtassi" disable="true" layoutX="514.0" layoutY="140.0" prefHeight="44.0" prefWidth="210.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtpeso" layoutX="278.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtpeso" layoutX="46.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtaltezza" layoutX="514.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtaltezza" layoutX="400.0" layoutY="218.0" prefHeight="44.0" prefWidth="210.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="45.0" layoutY="300.0" text="Inserire Anno di Immatricolazione (formato: AAAA-MM-GG):" textFill="#4863a0">
+      <Label layoutX="45.0" layoutY="300.0" text="Inserire Anno di Immatricolazione:" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
@@ -87,5 +87,15 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="262.0" layoutY="229.0" text="(in kg)" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="623.0" layoutY="229.0" text="(in cm)" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

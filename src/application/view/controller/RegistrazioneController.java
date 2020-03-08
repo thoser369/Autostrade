@@ -75,8 +75,7 @@ public class RegistrazioneController {
 			      txtpwd1.setStyle("-fx-border-color:  #4AA02C");
 			      txtpwd2.setStyle("-fx-border-color:  #4AA02C");
     	          uc.registrazione(nome, cognome, username, password);
-    	          txtusername.setStyle("-fx-border-color: #4AA02C");
-			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione avvenuta corretamente. Accedere per continuare.");
+			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione avvenuta correttamente. Accedere per continuare.");
 			      alert.showAndWait();
     	          ((Node)event.getSource()).getScene().getWindow().hide(); 
     	  		  Stage primaryStage = new Stage();

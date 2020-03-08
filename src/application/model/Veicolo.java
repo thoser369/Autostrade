@@ -5,10 +5,10 @@ public class Veicolo {
 	String modello;
 	String marca;
 	String targa;
-	int assi;
-	int peso;
-	int anno;
-	int altezza;
+	String assi;
+	String peso;
+	String anno;
+    int altezza;
 	float tariffa_unitaria;
 
 	public Veicolo() {
@@ -32,22 +32,22 @@ public class Veicolo {
 	public String setTarga(String n) {
 		return this.targa=n;
 	}
-	public int getAssi() {
+	public String getAssi() {
 		return this.assi;
 	}
-	public int setAssi(int n) {
+	public String setAssi(String n) {
 		return this.assi=n;
 	}
-	public int getPeso() {
+	public String getPeso() {
 		return this.peso;
 	}
-	public int setPeso(int n) {
+	public String setPeso(String n) {
 		return this.peso=n;
 	}
-	public int getAnno() {
+	public String getAnno() {
 		return this.anno;
 	}
-	public int seAnno(int n) {
+	public String seAnno(String n) {
 		return this.anno=n;
 	}
 	public int getAltezza() {

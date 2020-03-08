@@ -16,6 +16,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class HomeUtenteController {
+	static String utente="";
+	
 	BoxBlur shadow = new BoxBlur();
 	
 
@@ -77,6 +79,7 @@ public class HomeUtenteController {
     }
     //passaggio di parametri (username)
     public void passaggio_username(String utente) {
-      label_username.setText(utente);
+      HomeUtenteController.utente=utente;
+      label_username.setText(HomeUtenteController.utente);
     }
 }
