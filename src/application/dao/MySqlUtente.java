@@ -48,7 +48,7 @@ public class MySqlUtente implements DAOUtente {
 			pst.setString(2,cognome);
 			pst.setString(3, username);
 			pst.setString(4, pwd);
-			pst.setString(5, "viaggiatore");
+			pst.setString(5, "utente");
 			risultato=pst.executeUpdate();
 		
 		cn.close();

@@ -125,7 +125,7 @@ public class HomeUtenteController {
       HomeUtenteController.utente=utente;
       HomeUtenteController.pwd=pwd;
       label_username.setText(HomeUtenteController.utente);
-      if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("viaggiatore")) {
+      if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("utente")) {
     	  System.out.println("ciao");
     	  bottone_impostazioni.setVisible(false);
     	  }
