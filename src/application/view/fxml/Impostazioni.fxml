@@ -10,45 +10,57 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
-   <children>
-      <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
-         <children>
-            <Label layoutX="194.0" layoutY="16.0" prefHeight="54.0" prefWidth="292.0" text="Impostazioni" textFill="WHITE">
-               <font>
-                  <Font name="Calibri Bold Italic" size="50.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="89.0" fitWidth="120.0">
-               <image>
-                  <Image url="@Logo.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
-      <Button fx:id="bottone_autostrade" layoutX="84.0" layoutY="136.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="170.0" text="Aggiungi autostrada">
-         <font>
-            <Font name="Calibri Bold" size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottone_profilo" layoutX="84.0" layoutY="277.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="170.0" text="Aggiungi casello">
-         <font>
-            <Font name="Calibri Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottone_tariffe" layoutX="367.0" layoutY="136.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="170.0" text="Tariffe">
-         <font>
-            <Font name="Calibri Bold" size="24.0" />
-         </font>
-      </Button>
-      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="367.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="170.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Normative">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Normativa A" />
-            <MenuItem mnemonicParsing="false" text="Normativa B" />
-         </items>
-         <font>
-            <Font size="18.0" />
-         </font>
-      </MenuButton>
-   </children>
+<AnchorPane prefHeight="480.0" prefWidth="640.0"
+	style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
+	<children>
+		<Pane prefHeight="89.0" prefWidth="640.0"
+			style="-fx-background-color: #4863A0;">
+			<children>
+				<Label layoutX="209.0" layoutY="16.0" prefHeight="54.0"
+					prefWidth="292.0" text="Impostazioni" textFill="WHITE">
+					<font>
+						<Font name="Calibri Bold Italic" size="50.0" />
+					</font>
+				</Label>
+				<ImageView fitHeight="89.0" fitWidth="120.0">
+					<image>
+						<Image url="application/view/fxml/Logo.jpg" />
+					</image>
+				</ImageView>
+			</children>
+		</Pane>
+		<Button fx:id="bottone_autostrade" layoutX="80.0" layoutY="136.0"
+			mnemonicParsing="false" prefHeight="75.0" prefWidth="209.0"
+			text="Aggiungi autostrada">
+			<font>
+				<Font name="Calibri Bold" size="20.0" />
+			</font>
+		</Button>
+		<Button fx:id="bottone_profilo" layoutX="80.0" layoutY="300.0"
+			mnemonicParsing="false" prefHeight="75.0" prefWidth="209.0"
+			text="Aggiungi casello">
+			<font>
+				<Font name="Calibri Bold" size="20.0" />
+			</font>
+		</Button>
+		<Button fx:id="bottone_tariffe" layoutX="352.0" layoutY="136.0"
+			mnemonicParsing="false" prefHeight="75.0" prefWidth="209.0" text="Tariffe">
+			<font>
+				<Font name="Calibri Bold" size="20.0" />
+			</font>
+		</Button>
+		<MenuButton contentDisplay="CENTER" graphicTextGap="18.0"
+			layoutX="352.0" layoutY="315.0" mnemonicParsing="false" prefHeight="44.0"
+			prefWidth="209.0" style="-fx-border-radius: 5; -fx-background-radius: 5;"
+			text="Normative">
+			<items>
+				<MenuItem mnemonicParsing="false" text="Normativa A" />
+				<MenuItem mnemonicParsing="false" text="Normativa B" />
+			</items>
+			<font>
+				<Font size="20.0" />
+			</font>
+		</MenuButton>
+	</children>
 </AnchorPane>
