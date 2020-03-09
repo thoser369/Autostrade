@@ -5,21 +5,23 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="105.0" prefWidth="711.0" style="-fx-background-color: #4863A0;">
+      <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <children>
-            <Label layoutX="74.0" layoutY="16.0" text="Calcolo del pedaggio" textFill="WHITE">
+            <Label layoutX="140.0" layoutY="16.0" text="Calcolo del pedaggio" textFill="WHITE">
                <font>
-                  <Font name="Calibri Bold" size="64.0" />
+                  <Font name="Calibri Bold Italic" size="50.0" />
                </font>
             </Label>
          </children></Pane>
-      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="20.0" layoutY="136.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Casello di partenza">
+      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="39.0" layoutY="123.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="268.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Casello di partenza">
          <items>
             <MenuItem mnemonicParsing="false" text="Lanciano" />
             <MenuItem mnemonicParsing="false" text="Roseto" />
@@ -28,7 +30,7 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="252.0" layoutY="136.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Casello di arrivo">
+      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="339.0" layoutY="123.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="268.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Casello di arrivo">
          <items>
             <MenuItem mnemonicParsing="false" text="Pescara" />
             <MenuItem mnemonicParsing="false" text="Vasto" />
@@ -37,7 +39,7 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="482.0" layoutY="136.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Veicolo">
+      <MenuButton contentDisplay="CENTER" graphicTextGap="18.0" layoutX="183.0" layoutY="196.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="268.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Veicolo">
          <items>
             <MenuItem mnemonicParsing="false" text="Opel Mokka FC329DB" />
             <MenuItem mnemonicParsing="false" text="Fiat 500X FY780LA" />
@@ -46,30 +48,35 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <Label layoutX="20.0" layoutY="208.0" text="Normativa in uso:" textFill="#4863a0">
+      <Label layoutX="136.0" layoutY="276.0" text="Normativa in uso:" textFill="#4863a0">
          <font>
-            <Font name="Calibri Bold" size="30.0" />
+            <Font name="Calibri Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="262.0" layoutY="208.0" text="italiana" textFill="#4863a0">
+      <Label layoutX="333.0" layoutY="276.0" text="Italiana" textFill="#4863a0">
          <font>
-            <Font name="Calibri Bold" size="30.0" />
+            <Font name="Calibri Bold Italic" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="31.0" layoutY="275.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="188.0" text="Calcola il pedaggio ">
+      <Button layoutX="109.0" layoutY="342.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="188.0" text="Calcola il pedaggio ">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="397.0" layoutY="290.0" prefHeight="44.0" prefWidth="210.0" promptText="Pedaggio" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField layoutX="331.0" layoutY="342.0" prefHeight="44.0" prefWidth="210.0" promptText="Pedaggio" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button layoutX="31.0" layoutY="400.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+      <Button fx:id="bottone_indietro" layoutX="31.0" layoutY="414.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="89.0" fitWidth="120.0">
+         <image>
+            <Image url="@Logo.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
