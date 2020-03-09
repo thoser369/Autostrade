@@ -22,19 +22,14 @@
                   <Font name="Calibri Bold Italic" size="50.0" />
                </font>
             </Label>
-            <Button fx:id="bottone_indietro" layoutX="516.0" layoutY="32.0" mnemonicParsing="false" onAction="#indietro" prefHeight="36.0" prefWidth="82.0" text="Indietro">
-               <font>
-                  <Font name="Calibri Bold" size="16.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="89.0" fitWidth="120.0">
                <image>
-                  <Image url="@Logo.jpg" />
+                  <Image url="application/view/fxml/Logo.jpg" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <GridPane layoutX="37.0" layoutY="147.0">
+      <GridPane layoutX="37.0" layoutY="131.0" prefHeight="243.0" prefWidth="564.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
          </columnConstraints>
@@ -103,7 +98,12 @@
             </AnchorPane>
          </children>
       </GridPane>
-      <Button fx:id="bottone_aggiungiCasello" layoutX="450.0" layoutY="422.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="151.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Aggiungi Casello" textFill="#4863a0">
+      <Button fx:id="bottone_indietro" layoutX="37.0" layoutY="409.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="bottone_aggiungiCasello" layoutX="450.0" layoutY="409.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Casello" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
