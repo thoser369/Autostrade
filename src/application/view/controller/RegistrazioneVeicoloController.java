@@ -50,7 +50,7 @@ public class RegistrazioneVeicoloController {
     private MenuItem classeB;
 
     @FXML
-    private MenuItem classeC;
+    private MenuItem classe3;
 
     @FXML
     private MenuItem classe4;
@@ -86,8 +86,8 @@ public class RegistrazioneVeicoloController {
     }
 
     @FXML
-    void classeC_selezionata(ActionEvent event) {
-    	classe.setText("Classe C");
+    void classe3_selezionata(ActionEvent event) {
+    	classe.setText("Classe 3");
     }
 
     VeicoloController rvc= new VeicoloController();

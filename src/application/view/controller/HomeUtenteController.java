@@ -48,8 +48,15 @@ public class HomeUtenteController {
    
 
     @FXML
-    void impostazioni(ActionEvent event) {
-           System.out.println("ciaoo");
+    void impostazioni(ActionEvent event) throws IOException {
+    	((Node)event.getSource()).getScene().getWindow().hide(); 
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/Impostazioni.fxml").openStream());
+		Scene scene = new Scene(root);							
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Impostazioni");
+		primaryStage.show();
     }
     @FXML
     void aggiungi_veicolo(ActionEvent event) throws IOException {
