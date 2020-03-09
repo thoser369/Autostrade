@@ -13,5 +13,7 @@ public interface DAOUtente {
 	public boolean verifica_utente(String username);
 	
 	public boolean verifica_utente_password(String utente, String passowrd);
+	
+	//public boolean verifica_admin(String username);
 
 }

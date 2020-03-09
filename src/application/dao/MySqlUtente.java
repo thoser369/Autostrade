@@ -28,6 +28,7 @@ public class MySqlUtente implements DAOUtente {
 			if (rst.next()){
 				nuovoutente.setUsername(rst.getString("username"));
 				nuovoutente.setPassword(rst.getString("password"));	
+				nuovoutente.setTipo(rst.getString("tipo"));
 		}  
 			cn.close();}catch (SQLException e)	{
 			e.printStackTrace();
@@ -103,4 +104,7 @@ public class MySqlUtente implements DAOUtente {
    public void getA(String username, String pwd) {
 	   System.out.println("ciaoo");
    }
+  // public boolean verifica_admin(String username) {
+//	   
+ //  }
 }

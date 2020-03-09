@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="105.0" prefWidth="711.0" style="-fx-background-color: #4863A0;">
          <children>
@@ -61,12 +61,12 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtmodello" layoutX="397.0" layoutY="290.0" prefHeight="44.0" prefWidth="210.0" promptText="Pedaggio" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField layoutX="397.0" layoutY="290.0" prefHeight="44.0" prefWidth="210.0" promptText="Pedaggio" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="bottone_indietro2" layoutX="31.0" layoutY="400.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+      <Button layoutX="31.0" layoutY="400.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>
