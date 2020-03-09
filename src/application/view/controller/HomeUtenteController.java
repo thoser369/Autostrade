@@ -3,7 +3,6 @@ package application.view.controller;
 import java.io.IOException;
 
 import application.controller.UtenteController;
-import application.model.Utente;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,7 +18,6 @@ import javafx.stage.Stage;
 
 public class HomeUtenteController {
 	
-	UtenteController uc= new UtenteController();
 	public static boolean p=false;//visibilità bottone per admin
 	public static String utente="";
 	public static String pwd="";
@@ -42,7 +40,8 @@ public class HomeUtenteController {
     public void initialize() {
     	
     	label_username.setText(HomeUtenteController.utente);
-    	if(HomeUtenteController.p && UtenteController.getInstance().login(utente, pwd).getTipo().equals("amministratore")) 
+    	bottone_impostazioni.setVisible(false);
+    	if(HomeUtenteController.p) 
     		bottone_impostazioni.setVisible(true);
     		
     }
@@ -119,8 +118,10 @@ public class HomeUtenteController {
       HomeUtenteController.utente=utente;
       HomeUtenteController.pwd=pwd;
       label_username.setText(HomeUtenteController.utente);
-      if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("viaggiatore"))
+      if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("viaggiatore")) {
+    	  System.out.println("ciao");
     	  bottone_impostazioni.setVisible(false);
+    	  }
       else {
     	  HomeUtenteController.p= true;
     	  bottone_impostazioni.setVisible(true);          
