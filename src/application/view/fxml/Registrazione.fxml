@@ -45,7 +45,7 @@
       </Button>
       <ImageView fitHeight="89.0" fitWidth="120.0">
          <image>
-            <Image url="@Logo.jpg" />
+            <Image url="application/view/fxml/Logo.jpg" />
          </image>
       </ImageView>
       <Button fx:id="bottone_indietro" layoutX="59.0" layoutY="402.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
