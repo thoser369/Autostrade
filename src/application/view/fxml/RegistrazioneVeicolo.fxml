@@ -96,7 +96,7 @@
       </Label>
       <ImageView fitHeight="89.0" fitWidth="120.0">
          <image>
-            <Image url="@Logo.jpg" />
+            <Image url="application/view/fxml/Logo.jpg" />
          </image>
       </ImageView>
       
