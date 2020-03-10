@@ -41,9 +41,9 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<TextField fx:id="txtnome" layoutX="280.0" layoutY="153.0" prefHeight="39.0" prefWidth="227.0" promptText="Tariffa unitaria" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+		<TextField fx:id="txtnome" layoutX="280.0" layoutY="162.0" prefHeight="30.0" prefWidth="227.0" promptText="Tariffa unitaria" style="-fx-border-radius: 5; -fx-background-radius: 5;">
 			<font>
-				<Font size="18.0" />
+				<Font name="Calibri" size="18.0" />
 			</font>
 		</TextField>
 		<Button fx:id="bottone_conferma" layoutX="469.0" layoutY="395.0" mnemonicParsing="false" onAction="#conferma_tariffa" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #4AA02C;" text="Conferma" textFill="WHITE">
@@ -51,7 +51,7 @@
 				<Font name="Calibri Bold" size="18.0" />
 			</font>
 		</Button>
-		<Button fx:id="bottone_indietro2" layoutX="43.0" layoutY="395.0" mnemonicParsing="false" onAction="#indietro2" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+		<Button fx:id="bottone_indietro" layoutX="43.0" layoutY="395.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
 			<font>
 				<Font name="Calibri Bold" size="18.0" />
 			</font>
@@ -71,7 +71,7 @@
             <MenuItem fx:id="classe511" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 6" />
          </items>
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri" size="18.0" />
          </font>
       </MenuButton>
       <Label layoutX="86.0" layoutY="172.0" text="Tariffa Da Applicare:" textFill="#4863a0">
