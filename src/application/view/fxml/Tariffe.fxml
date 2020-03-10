@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.TariffaController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.TariffaController">
 	<children>
 		<Label prefHeight="83.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
 			<font>
@@ -41,17 +41,7 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<Label layoutX="84.0" layoutY="161.0" prefHeight="22.0" prefWidth="177.0" text="Tariffa da applicare:">
-			<font>
-				<Font name="Arial Bold" size="18.0" />
-			</font>
-		</Label>
-		<Label layoutX="86.0" layoutY="223.0" prefHeight="21.0" prefWidth="403.0" text=" Scegliere classe ambientale da modificare: ">
-			<font>
-				<Font name="Arial Bold" size="18.0" />
-			</font>
-		</Label>
-		<TextField fx:id="txtnome" layoutX="312.0" layoutY="150.0" prefHeight="44.0" prefWidth="210.0" promptText="Tariffa unitaria" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+		<TextField fx:id="txtnome" layoutX="280.0" layoutY="153.0" prefHeight="39.0" prefWidth="227.0" promptText="Tariffa unitaria" style="-fx-border-radius: 5; -fx-background-radius: 5;">
 			<font>
 				<Font size="18.0" />
 			</font>
@@ -66,12 +56,12 @@
 				<Font name="Calibri Bold" size="18.0" />
 			</font>
 		</Button>
-		<Label layoutX="528.0" layoutY="172.0" text="in €">
+		<Label layoutX="515.0" layoutY="173.0" text="in €">
 			<font>
 				<Font name="Calibri Bold Italic" size="18.0" />
 			</font>
 		</Label>
-      <MenuButton fx:id="classe1" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="94.0" layoutY="259.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
+      <MenuButton fx:id="classe1" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="147.0" layoutY="285.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="241.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
          <items>
             <MenuItem fx:id="classeA1" mnemonicParsing="false" onAction="#classeA_selezionata" text="Euro 1" />
             <MenuItem fx:id="classeB1" mnemonicParsing="false" onAction="#classeB_selezionata" text="Euro 2" />
@@ -84,5 +74,15 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
+      <Label layoutX="86.0" layoutY="172.0" text="Tariffa Da Applicare:" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="240.0" text="Scegliere Classe Ambientale Da Modificare:" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>
