@@ -6,10 +6,10 @@ import javafx.scene.control.Button;
 public class ImpostazioniController {
 
     @FXML
-    private Button bottone_autostrade;
+    private Button bottone_autostradeECaselli;
 
     @FXML
-    private Button bottone_profilo;
+    private Button bottone_pedaggio;
 
     @FXML
     private Button bottone_tariffe;

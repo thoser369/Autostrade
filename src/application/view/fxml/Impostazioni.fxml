@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
 	<children>
 		<Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
 			<children>
@@ -24,19 +24,19 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<Button fx:id="bottone_autostrade" layoutX="186.0" layoutY="149.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="292.0" text="Gestione autostrade e caselli">
+		<Button fx:id="bottone_autostradeECaselli" layoutX="131.0" layoutY="149.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="370.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #4863a0; -fx-border-radius: 10; -fx-border-width: 5;" text="Gestione Autostrade E Caselli" textAlignment="CENTER" textFill="#4863a0">
 			<font>
-				<Font name="Calibri Bold" size="20.0" />
+				<Font name="Calibri Bold" size="25.0" />
 			</font>
 		</Button>
-		<Button fx:id="bottone_tariffe" layoutX="354.0" layoutY="268.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="209.0" text="Gestione tariffe">
+		<Button fx:id="bottone_tariffe" layoutX="332.0" layoutY="286.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="248.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #4AA02C; -fx-border-radius: 10; -fx-border-width: 5;" text="Gestione Tariffe" textAlignment="CENTER" textFill="#4aa02c">
 			<font>
-				<Font name="Calibri Bold" size="20.0" />
+				<Font name="Calibri Bold" size="25.0" />
 			</font>
 		</Button>
-      <Button fx:id="bottone_profilo1" layoutX="111.0" layoutY="268.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="209.0" text="Gestione pedaggio">
+      <Button fx:id="bottone_pedaggio" layoutX="56.0" layoutY="286.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="248.0" style="-fx-border-color: ORANGE; -fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Gestione Pedaggio" textAlignment="CENTER" textFill="ORANGE">
          <font>
-            <Font name="Calibri Bold" size="20.0" />
+            <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
 	</children>
