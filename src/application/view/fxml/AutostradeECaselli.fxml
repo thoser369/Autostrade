@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.CaselloController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.CaselloController">
    <children>
       <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <children>
-            <Label layoutX="253.0" layoutY="21.0" text="Caselli" textFill="WHITE">
+            <Label layoutX="162.0" layoutY="16.0" prefHeight="58.0" prefWidth="431.0" text="Autostrade e Caselli" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold Italic" size="50.0" />
                </font>
@@ -29,84 +27,56 @@
             </ImageView>
          </children>
       </Pane>
-      <GridPane layoutX="37.0" layoutY="131.0" prefHeight="243.0" prefWidth="564.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <AnchorPane>
+      <Button fx:id="bottone_indietro" layoutX="36.0" layoutY="425.0" mnemonicParsing="false" onAction="#indietro" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <SplitPane dividerPositions="0.5209790209790209" layoutX="34.0" layoutY="112.0" orientation="VERTICAL" prefHeight="288.0" prefWidth="569.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="149.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <BorderPane layoutY="-14.0" prefHeight="265.0" prefWidth="564.0">
-                     <center>
-                        <GridPane gridLinesVisible="true" prefHeight="265.0" prefWidth="583.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="102.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.0" minWidth="10.0" prefWidth="481.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: orange;" text="Km" textAlignment="CENTER">
-                                 <font>
-                                    <Font name="Cambria Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="481.0" style="-fx-background-color: orange;" text="Nome Casello" textAlignment="CENTER" GridPane.columnIndex="1">
-                                 <font>
-                                    <Font name="Cambria Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txt21" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="1" />
-                              <TextField fx:id="txt210" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="10" />
-                              <TextField fx:id="txt29" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="9" />
-                              <TextField fx:id="txt28" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="8" />
-                              <TextField fx:id="txt27" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="7" />
-                              <TextField fx:id="txt26" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="6" />
-                              <TextField fx:id="txt25" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="5" />
-                              <TextField fx:id="txt24" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="4" />
-                              <TextField fx:id="txt22" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="2" />
-                              <TextField fx:id="txt23" editable="false" style="-fx-background-color: white;" GridPane.rowIndex="3" />
-                              <TextField fx:id="txt31" editable="false" prefHeight="25.0" prefWidth="284.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="txt310" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                              <TextField fx:id="txt39" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                              <TextField fx:id="txt38" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                              <TextField fx:id="txt37" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <TextField fx:id="txt36" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField fx:id="txt35" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField fx:id="txt34" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField fx:id="txt33" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField fx:id="txt32" editable="false" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                           </children>
-                        </GridPane>
-                     </center>
-                  </BorderPane>
+                  <Label layoutX="7.0" layoutY="7.0" text="Autostrade" textFill="#4863a0">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="17.0" layoutY="50.0" prefHeight="25.0" prefWidth="254.0" promptText="Inserisci L'Autostrada da Aggiungere" />
+                  <Button fx:id="bottone_aggiungiAutostrada" layoutX="69.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Autostrada" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bottone_eliminaAutostrada" layoutX="348.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Autostrada" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ComboBox layoutX="297.0" layoutY="50.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli L'Autostrada da Eliminare" />
                </children>
             </AnchorPane>
-         </children>
-      </GridPane>
-      <Button fx:id="bottone_indietro" layoutX="36.0" layoutY="409.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
-         <font>
-            <Font name="Calibri Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottone_aggiungiCasello" layoutX="450.0" layoutY="409.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Casello" textFill="WHITE">
-         <font>
-            <Font name="Calibri Bold" size="18.0" />
-         </font>
-      </Button>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="3.0" text="Caselli" textFill="#4863a0">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="17.0" layoutY="45.0" prefHeight="25.0" prefWidth="254.0" promptText="Inserisci il Casello da Aggiungere" />
+                  <Button fx:id="bottone_aggiungiCasello" layoutX="69.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Casello" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bottone_eliminaCasello" layoutX="348.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Casello" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ComboBox layoutX="297.0" layoutY="45.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli il Casello da Eliminare" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>
