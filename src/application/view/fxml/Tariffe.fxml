@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -39,32 +41,17 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<Label layoutX="84.0" layoutY="161.0" prefHeight="22.0" prefWidth="162.0" text="Tariffa unitaria:">
+		<Label layoutX="84.0" layoutY="161.0" prefHeight="22.0" prefWidth="177.0" text="Tariffa da applicare:">
 			<font>
 				<Font name="Arial Bold" size="18.0" />
 			</font>
 		</Label>
-		<Label layoutX="86.0" layoutY="223.0" prefHeight="21.0" prefWidth="141.0" text="Iva:">
-			<font>
-				<Font name="Arial Bold" size="18.0" />
-			</font>
-		</Label>
-		<Label layoutX="84.0" layoutY="282.0" prefHeight="22.0" prefWidth="162.0" text="Arrotondamento:">
+		<Label layoutX="86.0" layoutY="223.0" prefHeight="21.0" prefWidth="403.0" text=" Scegliere classe ambientale da modificare: ">
 			<font>
 				<Font name="Arial Bold" size="18.0" />
 			</font>
 		</Label>
 		<TextField fx:id="txtnome" layoutX="312.0" layoutY="150.0" prefHeight="44.0" prefWidth="210.0" promptText="Tariffa unitaria" style="-fx-border-radius: 5; -fx-background-radius: 5;">
-			<font>
-				<Font size="18.0" />
-			</font>
-		</TextField>
-		<TextField fx:id="txtnome1" layoutX="312.0" layoutY="211.0" prefHeight="44.0" prefWidth="210.0" promptText="Iva" style="-fx-border-radius: 5; -fx-background-radius: 5;">
-			<font>
-				<Font size="18.0" />
-			</font>
-		</TextField>
-		<TextField fx:id="txtnome2" layoutX="312.0" layoutY="271.0" prefHeight="44.0" prefWidth="210.0" promptText="Arrotondamento" style="-fx-border-radius: 5; -fx-background-radius: 5;">
 			<font>
 				<Font size="18.0" />
 			</font>
@@ -84,10 +71,18 @@
 				<Font name="Calibri Bold Italic" size="18.0" />
 			</font>
 		</Label>
-		<Label layoutX="528.0" layoutY="233.0" text="in %">
-			<font>
-				<Font name="Calibri Bold Italic" size="18.0" />
-			</font>
-		</Label>
+      <MenuButton fx:id="classe1" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="94.0" layoutY="259.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="210.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
+         <items>
+            <MenuItem fx:id="classeA1" mnemonicParsing="false" onAction="#classeA_selezionata" text="Euro 1" />
+            <MenuItem fx:id="classeB1" mnemonicParsing="false" onAction="#classeB_selezionata" text="Euro 2" />
+            <MenuItem fx:id="classe31" mnemonicParsing="false" onAction="#classe3_selezionata" text="Euro 3" />
+            <MenuItem fx:id="classe41" mnemonicParsing="false" onAction="#classe4_selezionata" text="Euro 4" />
+            <MenuItem fx:id="classe51" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 5" />
+            <MenuItem fx:id="classe511" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 6" />
+         </items>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </MenuButton>
 	</children>
 </AnchorPane>

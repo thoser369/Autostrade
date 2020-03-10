@@ -32,32 +32,32 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtassi" disable="true" layoutX="35.0" layoutY="271.0" prefHeight="44.0" prefWidth="233.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtassi" disable="true" layoutX="35.0" layoutY="240.0" prefHeight="44.0" prefWidth="233.0" promptText="Assi" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtpeso" layoutX="35.0" layoutY="196.0" prefHeight="44.0" prefWidth="211.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtpeso" layoutX="35.0" layoutY="185.0" prefHeight="44.0" prefWidth="211.0" promptText="Peso" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtaltezza" layoutX="333.0" layoutY="196.0" prefHeight="44.0" prefWidth="195.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtaltezza" layoutX="333.0" layoutY="185.0" prefHeight="44.0" prefWidth="195.0" promptText="Altezza" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtanno" layoutX="333.0" layoutY="271.0" prefHeight="44.0" prefWidth="233.0" promptText=" Anno Immatricolazione" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtanno" layoutX="333.0" layoutY="240.0" prefHeight="44.0" prefWidth="233.0" promptText=" Anno Immatricolazione" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txttarga" layoutX="35.0" layoutY="345.0" prefHeight="44.0" prefWidth="233.0" promptText="Targa" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txttarga" layoutX="35.0" layoutY="295.0" prefHeight="44.0" prefWidth="233.0" promptText="Targa" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="333.0" layoutY="345.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
+      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="333.0" layoutY="295.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
         <items>
           <MenuItem fx:id="classeA" mnemonicParsing="false" onAction="#classeA_selezionata" text="Classe A" />
           <MenuItem fx:id="classeB" mnemonicParsing="false" onAction="#classeB_selezionata" text="Classe B" />
@@ -79,12 +79,12 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="253.0" layoutY="207.0" text="(in kg)" textFill="#4863a0">
+      <Label layoutX="253.0" layoutY="196.0" text="(in kg)" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="537.0" layoutY="207.0" text="(in cm)" textFill="#4863a0">
+      <Label layoutX="537.0" layoutY="196.0" text="(in cm)" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
@@ -99,6 +99,19 @@
             <Image url="application/view/fxml/Logo.jpg" />
          </image>
       </ImageView>
+      <MenuButton fx:id="classe1" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="35.0" layoutY="354.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
+         <items>
+            <MenuItem fx:id="classeA1" mnemonicParsing="false" onAction="#classeA_selezionata" text="Euro 1" />
+            <MenuItem fx:id="classeB1" mnemonicParsing="false" onAction="#classeB_selezionata" text="Euro 2" />
+            <MenuItem fx:id="classe31" mnemonicParsing="false" onAction="#classe3_selezionata" text="Euro 3" />
+            <MenuItem fx:id="classe41" mnemonicParsing="false" onAction="#classe4_selezionata" text="Euro 4" />
+            <MenuItem fx:id="classe51" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 5" />
+            <MenuItem fx:id="classe511" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 6" />
+         </items>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </MenuButton>
       
    </children>
 </AnchorPane>
