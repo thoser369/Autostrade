@@ -32,34 +32,39 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtclasse" layoutX="276.0" layoutY="127.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtclasse" layoutX="276.0" layoutY="109.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="bottone_aggiorna" layoutX="333.0" layoutY="203.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
+      <Button fx:id="bottone_aggiorna" layoutX="342.0" layoutY="166.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="29.0" layoutY="274.0" prefHeight="118.0" prefWidth="589.0" text="I pedaggi verranno calcolati in base alla Classe (Italiana o Europea) in uso. &#10;Si ricorda che dal 2021, nel conteggio, verranno valutate anche &#10;le classi tariffarie di appartenenza a ciascun veicolo.">
+      <Label layoutX="29.0" layoutY="221.0" prefHeight="96.0" prefWidth="589.0" text="I pedaggi verranno calcolati in base alla Classe (Italiana o Europea) in uso. &#10;Si ricorda che dal 2021, nel conteggio, verranno valutate anche &#10;le classi tariffarie di appartenenza a ciascun veicolo.">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="102.0" layoutY="135.0" text="Classe in Uso:" textFill="#4863a0">
+      <Label layoutX="102.0" layoutY="117.0" text="Classe in Uso:" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <MenuButton layoutX="60.0" layoutY="203.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
+      <MenuButton layoutX="60.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" text="Classe unitaria" />
+          <MenuItem mnemonicParsing="false" text="Classe ambientale" />
         </items>
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </MenuButton>
+      <Label layoutX="26.0" layoutY="321.0" prefHeight="58.0" prefWidth="589.0" text="I pedaggi verranno calcolati secondo il nuovo sistema&#10;(valutando anche le classi ambientali).&#10;">
+         <font>
+            <Font name="Calibri Italic" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
