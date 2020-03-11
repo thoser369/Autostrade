@@ -36,23 +36,24 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="149.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <Label layoutX="7.0" layoutY="7.0" text="Autostrade" textFill="#4863a0">
+                  <Label layoutX="7.0" layoutY="3.0" text="Autostrade" textFill="#4863a0">
                      <font>
                         <Font name="Calibri Bold Italic" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtautostrada" layoutX="17.0" layoutY="50.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci L'Autostrada da Aggiungere" />
-                  <Button fx:id="bottone_aggiungiAutostrada" layoutX="69.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Autostrada" textFill="WHITE">
+                  <TextField fx:id="txtautostrada" layoutX="14.0" layoutY="30.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci L'Autostrada da Aggiungere" />
+                  <Button fx:id="bottone_aggiungiAutostrada" layoutX="68.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Autostrada" textFill="WHITE">
                      <font>
                         <Font name="Calibri Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bottone_eliminaAutostrada" layoutX="348.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Autostrada" textFill="WHITE">
+                  <Button fx:id="bottone_eliminaAutostrada" layoutX="349.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Autostrada" textFill="WHITE">
                      <font>
                         <Font name="Calibri Bold" size="15.0" />
                      </font>
                   </Button>
-                  <ComboBox fx:id="comboautostrada" layoutX="297.0" layoutY="50.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli L'Autostrada da Eliminare" />
+                  <ComboBox fx:id="comboautostrada" layoutX="297.0" layoutY="33.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli L'Autostrada da Eliminare" />
+                  <TextField fx:id="txtautostrada1" layoutX="14.0" layoutY="69.0" prefHeight="31.0" prefWidth="262.0" promptText="Tariffa" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
