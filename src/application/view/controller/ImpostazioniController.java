@@ -23,6 +23,9 @@ public class ImpostazioniController {
     private Button bottone_pedaggio;
 
     @FXML
+    private Button bottone_indietro;
+
+    @FXML
     void scelta_AutostradeECaselli(ActionEvent event) throws IOException {
     	((Node)event.getSource()).getScene().getWindow().hide(); 
 		Stage primaryStage = new Stage();
@@ -59,6 +62,18 @@ public class ImpostazioniController {
 		primaryStage.setTitle("Gestione Tariffe");
 		primaryStage.show();
 
+    }
+
+    @FXML
+    void indietro(ActionEvent event) throws IOException {
+    	((Node)event.getSource()).getScene().getWindow().hide(); 
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		AnchorPane root=loader.load(getClass().getResource("/application/view/fxml/HomeUtente.fxml").openStream());
+		Scene scene = new Scene(root);							
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Home");
+		primaryStage.show();
     }
 
 }
