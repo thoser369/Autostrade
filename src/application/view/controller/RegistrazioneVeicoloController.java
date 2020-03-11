@@ -168,7 +168,10 @@ public class RegistrazioneVeicoloController {
 			      txtaltezza.setStyle("-fx-border-color:  #4AA02C");
 			      txtanno.setStyle("-fx-border-color:  #4AA02C");
 			      txttarga.setStyle("-fx-border-color:  #4AA02C");
-			      rvc.aggiungi_veicolo(VeicoloController.getInstance().getIDUtente(HomeUtenteController.utente), txtmodello.getText(), txtmarca.getText(), txttarga.getText(), 
+			      rvc.aggiungi_veicolo(VeicoloController.getInstance().getIDUtente(HomeUtenteController.utente), 
+			    		  VeicoloController.getInstance().getIDclasseveicolo(classe_veicolo.getText()),
+			    		  VeicoloController.getInstance().getIDclasseambientale(classe_ambientale.getText()),
+			    		  txtmodello.getText(), txtmarca.getText(), txttarga.getText(), 
 			    		  txtpeso.getText(), txtanno.getText(), Integer.parseInt(txtaltezza.getText()), txtassi.getText());
 			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione del veicolo avvenuta correttamente.");
 			      alert.showAndWait();
