@@ -22,4 +22,14 @@ public class ModificaTariffaController {
 			return daotariffa.modifica_tariffa(nome, tariffa);
 		}
 		
+		public String getGestione() {
+			return daotariffa.getGestione();
+		}
+		
+		public boolean modifica_gestione(String gestione) {
+			return daotariffa.modifica_gestione(gestione);
+		}
+		
+		
+		
 }

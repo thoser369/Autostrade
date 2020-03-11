@@ -32,12 +32,12 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtclasse" layoutX="276.0" layoutY="109.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtclasse" disable="true" layoutX="276.0" layoutY="109.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="bottone_aggiorna" layoutX="342.0" layoutY="166.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
+      <Button fx:id="bottone_aggiorna" layoutX="342.0" layoutY="166.0" mnemonicParsing="false" onAction="#aggiorna_scelta" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
