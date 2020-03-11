@@ -3,6 +3,9 @@ package application.view.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 public class GestioneClassePedaggioController {
@@ -11,64 +14,35 @@ public class GestioneClassePedaggioController {
     private Button bottone_indietro;
 
     @FXML
-    private TextField txt21;
+    private TextField txtclasse;
 
     @FXML
-    private TextField txt210;
+    private Button bottone_aggiorna;
 
     @FXML
-    private TextField txt29;
+    private Label label_classeunitaria;
 
     @FXML
-    private TextField txt28;
+    private MenuButton classe;
 
     @FXML
-    private TextField txt27;
+    private MenuItem classe_unitaria;
 
     @FXML
-    private TextField txt26;
+    private MenuItem classe_ambientale;
 
     @FXML
-    private TextField txt25;
+    private Label label_classeambientale;
 
     @FXML
-    private TextField txt24;
+    void classe_ambientale_selezionata(ActionEvent event) {
+
+    }
 
     @FXML
-    private TextField txt22;
+    void classe_unitaria_selezionata(ActionEvent event) {
 
-    @FXML
-    private TextField txt23;
-
-    @FXML
-    private TextField txt31;
-
-    @FXML
-    private TextField txt310;
-
-    @FXML
-    private TextField txt39;
-
-    @FXML
-    private TextField txt38;
-
-    @FXML
-    private TextField txt37;
-
-    @FXML
-    private TextField txt36;
-
-    @FXML
-    private TextField txt35;
-
-    @FXML
-    private TextField txt34;
-
-    @FXML
-    private TextField txt33;
-
-    @FXML
-    private TextField txt32;
+    }
 
     @FXML
     void indietro(ActionEvent event) {
@@ -76,4 +50,3 @@ public class GestioneClassePedaggioController {
     }
 
 }
-

@@ -42,7 +42,7 @@
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="29.0" layoutY="221.0" prefHeight="96.0" prefWidth="589.0" text="I pedaggi verranno calcolati in base alla Classe (Italiana o Europea) in uso. &#10;Si ricorda che dal 2021, nel conteggio, verranno valutate anche &#10;le classi tariffarie di appartenenza a ciascun veicolo.">
+      <Label fx:id="label_classeunitaria" layoutX="26.0" layoutY="248.0" prefHeight="96.0" prefWidth="589.0" text="Si ricorda che dal 2021, nel conteggio, verranno valutate anche &#10;le classi ambientali di appartenenza a ciascun veicolo.">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
@@ -52,16 +52,21 @@
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <MenuButton layoutX="60.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
+      <MenuButton fx:id="classe" layoutX="60.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
         <items>
-          <MenuItem mnemonicParsing="false" text="Classe unitaria" />
-          <MenuItem mnemonicParsing="false" text="Classe ambientale" />
+          <MenuItem fx:id="classe_unitaria" mnemonicParsing="false" onAction="#classe_unitaria_selezionata" text="Classe unitaria" />
+          <MenuItem fx:id="classe_ambientale" mnemonicParsing="false" onAction="#classe_ambientale_selezionata" text="Classe ambientale" />
         </items>
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </MenuButton>
-      <Label layoutX="26.0" layoutY="321.0" prefHeight="58.0" prefWidth="589.0" text="I pedaggi verranno calcolati secondo il nuovo sistema&#10;(valutando anche le classi ambientali).&#10;">
+      <Label fx:id="label_classeambientale" layoutX="26.0" layoutY="328.0" prefHeight="58.0" prefWidth="589.0" text="I pedaggi verranno calcolati secondo il nuovo sistema&#10;(valutando anche le classi ambientali).&#10;">
+         <font>
+            <Font name="Calibri Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="235.0" text="I pedaggi verranno calcolati in base alla Classe (Unitaria o Ambientale) in uso. ">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
