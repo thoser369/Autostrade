@@ -10,7 +10,7 @@ import application.model.Veicolo;
 
 public class MySqlVeicolo implements DAOVeicolo {
 	
-	private static final String DATI_UTENTE= "SELECT ID FROM utente WHERE username=?";
+	private static final String ID_UTENTE= "SELECT ID FROM utente WHERE username=?";
 	private static final String ID_CLASSE_VEICOLO= "SELECT ID FROM classe_veicolo WHERE nome=?";
 	private static final String ID_CLASSE_AMBIENTALE= "SELECT ID FROM classe_ambientale WHERE nome=?";
 	private static final String DATI_VEICOLO= "SELECT * FROM veicolo WHERE targa=?";
@@ -67,7 +67,7 @@ public class MySqlVeicolo implements DAOVeicolo {
 		ResultSet rst=null;	
 		cn=MySqlConnessione.createConnection();
 		try {
-			pst=cn.prepareStatement(DATI_UTENTE);
+			pst=cn.prepareStatement(ID_UTENTE);
 			pst.setString(1, username);
 			rst=pst.executeQuery();
 			if (rst.next()){
