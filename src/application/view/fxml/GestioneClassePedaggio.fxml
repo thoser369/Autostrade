@@ -54,8 +54,8 @@
       </Label>
       <MenuButton fx:id="classe" layoutX="60.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
         <items>
-          <MenuItem fx:id="classe_unitaria" mnemonicParsing="false" onAction="#classe_unitaria_selezionata" text="Classe unitaria" />
-          <MenuItem fx:id="classe_ambientale" mnemonicParsing="false" onAction="#classe_ambientale_selezionata" text="Classe ambientale" />
+          <MenuItem fx:id="classe_unitaria" mnemonicParsing="false" onAction="#classe_unitaria_selezionata" text="Classe Unitaria" />
+          <MenuItem fx:id="classe_ambientale" mnemonicParsing="false" onAction="#classe_ambientale_selezionata" text="Classe Ambientale" />
         </items>
          <font>
             <Font name="Calibri Bold" size="20.0" />
