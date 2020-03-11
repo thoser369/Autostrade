@@ -39,5 +39,10 @@
             <Font name="Calibri Bold" size="25.0" />
          </font>
       </Button>
+      <Button fx:id="bottone_indietro" layoutX="39.0" layoutY="416.0" mnemonicParsing="false" onAction="#indietro" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #4863a0; -fx-border-radius: 5; -fx-background-radius: 5;" text="Indietro" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
 	</children>
 </AnchorPane>
