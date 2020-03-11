@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.HomeUtenteController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.HomeUtenteController">
 	<children>
-		<Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;" AnchorPane.bottomAnchor="391.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<Pane prefHeight="125.0" prefWidth="640.0" style="-fx-background-color: #4863A0;" AnchorPane.bottomAnchor="355.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<children>
 				<Label layoutX="208.0" layoutY="16.0" text="Benvenuto" textFill="WHITE">
 					<font>
@@ -27,7 +27,7 @@
 						<Font name="Calibri Bold" size="15.0" />
 					</font>
 				</Button>
-				<ImageView fitHeight="89.0" fitWidth="120.0">
+				<ImageView fitHeight="125.0" fitWidth="120.0">
 					<image>
 						<Image url="application/view/fxml/Logo.jpg" />
 					</image>

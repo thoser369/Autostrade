@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.TrattaController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.GestioneClassePedaggioController">
    <children>
       <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <children>
@@ -31,13 +31,13 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="276.0" layoutY="127.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtclasse" layoutX="276.0" layoutY="127.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
       <ComboBox layoutX="60.0" layoutY="203.0" prefHeight="37.0" prefWidth="233.0" promptText="Scegli Classe" visibleRowCount="15" />
-      <Button fx:id="bottone_profilo1" layoutX="333.0" layoutY="203.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
+      <Button fx:id="bottone_aggiorna" layoutX="333.0" layoutY="203.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>

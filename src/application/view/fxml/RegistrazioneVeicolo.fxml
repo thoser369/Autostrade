@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.RegistrazioneVeicoloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.RegistrazioneVeicoloController">
    <children>
       <Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
          <children>
@@ -57,7 +57,7 @@
             <Font name="Calibri" size="18.0" />
          </font>
       </TextField>
-      <MenuButton fx:id="classe" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="333.0" layoutY="314.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
+      <MenuButton fx:id="classe_veicolo" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="333.0" layoutY="314.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Veicolo">
         <items>
           <MenuItem fx:id="classeA" mnemonicParsing="false" onAction="#classeA_selezionata" text="Classe A" />
           <MenuItem fx:id="classeB" mnemonicParsing="false" onAction="#classeB_selezionata" text="Classe B" />
@@ -99,14 +99,14 @@
             <Image url="application/view/fxml/Logo.jpg" />
          </image>
       </ImageView>
-      <MenuButton fx:id="classe1" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="194.0" layoutY="372.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
+      <MenuButton fx:id="classe_ambientale" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="194.0" layoutY="372.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;" text="Classe Ambientale">
          <items>
-            <MenuItem fx:id="classeA1" mnemonicParsing="false" onAction="#classeA_selezionata" text="Euro 1" />
-            <MenuItem fx:id="classeB1" mnemonicParsing="false" onAction="#classeB_selezionata" text="Euro 2" />
-            <MenuItem fx:id="classe31" mnemonicParsing="false" onAction="#classe3_selezionata" text="Euro 3" />
-            <MenuItem fx:id="classe41" mnemonicParsing="false" onAction="#classe4_selezionata" text="Euro 4" />
-            <MenuItem fx:id="classe51" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 5" />
-            <MenuItem fx:id="classe511" mnemonicParsing="false" onAction="#classe5_selezionata" text="Euro 6" />
+            <MenuItem fx:id="classeEuro1" mnemonicParsing="false" onAction="#classeE1_selezionata" text="Euro 1" />
+            <MenuItem fx:id="classeEuro2" mnemonicParsing="false" onAction="#classeE2_selezionata" text="Euro 2" />
+            <MenuItem fx:id="classeEuro3" mnemonicParsing="false" onAction="#classeE3_selezionata" text="Euro 3" />
+            <MenuItem fx:id="classeEuro4" mnemonicParsing="false" onAction="#classeE4_selezionata" text="Euro 4" />
+            <MenuItem fx:id="classeEuro5" mnemonicParsing="false" onAction="#classeE5_selezionata" text="Euro 5" />
+            <MenuItem fx:id="classeEuro6" mnemonicParsing="false" onAction="#classeE6_selezionata" text="Euro 6" />
          </items>
          <font>
             <Font name="Calibri" size="18.0" />

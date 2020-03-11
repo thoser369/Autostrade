@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class TrattaController {
+public class GestioneClassePedaggioController {
 
     @FXML
     private Button bottone_indietro;

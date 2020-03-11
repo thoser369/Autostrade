@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
+<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.controller.ImpostazioniController">
 	<children>
 		<Pane prefHeight="89.0" prefWidth="640.0" style="-fx-background-color: #4863A0;">
 			<children>
@@ -24,7 +24,7 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<Button fx:id="bottone_autostradeECaselli" layoutX="131.0" layoutY="149.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="370.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #4863a0; -fx-border-radius: 10; -fx-border-width: 5;" text="Gestione Autostrade E Caselli" textAlignment="CENTER" textFill="#4863a0">
+		<Button fx:id="bottone_AutostradeECaselli" layoutX="131.0" layoutY="149.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="370.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: #4863a0; -fx-border-radius: 10; -fx-border-width: 5;" text="Gestione Autostrade E Caselli" textAlignment="CENTER" textFill="#4863a0">
 			<font>
 				<Font name="Calibri Bold" size="25.0" />
 			</font>

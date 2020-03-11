@@ -41,7 +41,10 @@ public class RegistrazioneVeicoloController {
     private TextField txttarga;
 
     @FXML
-    private MenuButton classe;
+    private MenuButton classe_veicolo;
+   
+    @FXML
+    private MenuButton classe_ambientale;
    
     @FXML
     private MenuItem classeA;
@@ -58,6 +61,23 @@ public class RegistrazioneVeicoloController {
     @FXML
     private MenuItem classe5;
 
+    @FXML
+    private MenuItem classeEuro1;
+    
+    @FXML
+    private MenuItem classeEuro2;
+    
+    @FXML
+    private MenuItem classeEuro3;
+    
+    @FXML
+    private MenuItem classeEuro4;
+   
+    @FXML
+    private MenuItem classeEuro5;
+    
+    @FXML
+    private MenuItem classeEuro6;
     
     @FXML
     private Button bottone_conferma2;
@@ -67,29 +87,59 @@ public class RegistrazioneVeicoloController {
    
     @FXML
     void classe4_selezionata(ActionEvent event) {
-       classe.setText("Classe 4");
+       classe_veicolo.setText("Classe 4");
     }
 
     @FXML
     void classe5_selezionata(ActionEvent event) {
-    	classe.setText("Classe 5");
+    	classe_veicolo.setText("Classe 5");
     }
 
     @FXML
     void classeA_selezionata(ActionEvent event) {
-    	classe.setText("Classe A");
+    	classe_veicolo.setText("Classe A");
     }
 
     @FXML
     void classeB_selezionata(ActionEvent event) {
-    	classe.setText("Classe B");
+    	classe_veicolo.setText("Classe B");
     }
 
     @FXML
     void classe3_selezionata(ActionEvent event) {
-    	classe.setText("Classe 3");
+    	classe_veicolo.setText("Classe 3");
     }
 
+    @FXML
+    void classeE1_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 1");
+    }
+    
+    @FXML
+    void classeE2_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 2");
+    }
+    
+    @FXML
+    void classeE3_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 3");
+    }
+   
+    @FXML
+    void classeE4_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 4");
+    }
+    
+    @FXML
+    void classeE5_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 5");
+    }
+   
+    @FXML
+    void classeE6_selezionata(ActionEvent event) {
+    	classe_ambientale.setText("Euro 6");
+    }
+    
     VeicoloController rvc= new VeicoloController();
     
     @FXML
@@ -97,17 +147,18 @@ public class RegistrazioneVeicoloController {
     	//controllo campi vuoti
     	if(txtmarca.getText().equals("")|txtmodello.getText().equals("")|
     			txtpeso.getText().equals("")|txtaltezza.getText().equals("")|
-    			txtanno.getText().equals("")|txttarga.getText().equals("")|classe.getText().equals("Classe Veicolo")) {
+    			txtanno.getText().equals("")|txttarga.getText().equals("")|classe_veicolo.getText().equals("Classe Veicolo")|
+    			classe_ambientale.getText().equals("Classe Ambientale")) {
     		Alert alert = new Alert(AlertType.ERROR, "Riempire tutti i campi.");
 		    alert.showAndWait();
 		}
     	else {
-    		if (classe.getText().equals("Classe A")&& Integer.parseInt(txtaltezza.getText())<=130)
+    		if (classe_veicolo.getText().equals("Classe A")&& Integer.parseInt(txtaltezza.getText())<=130)
     			txtassi.setText("1");
-    		else if(classe.getText().equals("Classe B")&& Integer.parseInt(txtaltezza.getText())>130)
+    		else if(classe_veicolo.getText().equals("Classe B")&& Integer.parseInt(txtaltezza.getText())>130)
     			 txtassi.setText("2");
-    		     else if(classe.getText().equals("Classe 3")) txtassi.setText("3");
-    		          else if(classe.getText().equals("Classe 4")) txtassi.setText("4");
+    		     else if(classe_veicolo.getText().equals("Classe 3")) txtassi.setText("3");
+    		          else if(classe_veicolo.getText().equals("Classe 4")) txtassi.setText("4");
     		               else txtassi.setText("5 o piu");
     		if(!rvc.verifica_presenza_veicolo(txttarga.getText())) {
     			  txtmarca.setStyle("-fx-border-color:  #4AA02C");
