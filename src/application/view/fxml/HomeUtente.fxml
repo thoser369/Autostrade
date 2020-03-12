@@ -35,20 +35,30 @@
 
 			</children>
 		</Pane>
-		<Button fx:id="bottone_pedaggio" layoutX="43.0" layoutY="138.0" mnemonicParsing="false" onAction="#calcolo_pedaggio" prefHeight="145.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: orange; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Calcolo Pedaggio Autostradale" textAlignment="CENTER" textFill="ORANGE" wrapText="true">
+		<Button fx:id="bottone_pedaggio" layoutX="43.0" layoutY="192.0" mnemonicParsing="false" onAction="#calcolo_pedaggio" prefHeight="145.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: orange; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Calcolo Pedaggio Autostradale" textAlignment="CENTER" textFill="ORANGE" wrapText="true">
 			<font>
 				<Font name="Calibri Bold" size="25.0" />
 			</font>
 		</Button>
-		<Button fx:id="bottone_veicolo" layoutX="350.0" layoutY="138.0" mnemonicParsing="false" onAction="#aggiungi_veicolo" prefHeight="145.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #4AA02C; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Aggiungi Veicolo" textAlignment="CENTER" textFill="#4aa02c" wrapText="true">
+		<Button fx:id="bottone_veicolo" layoutX="350.0" layoutY="193.0" mnemonicParsing="false" onAction="#aggiungi_veicolo" prefHeight="145.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #4AA02C; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Aggiungi Veicolo" textAlignment="CENTER" textFill="#4aa02c" wrapText="true">
 			<font>
 				<Font name="Calibri Bold" size="25.0" />
 			</font>
 		</Button>
-		<Button fx:id="bottone_impostazioni" layoutX="188.0" layoutY="340.0" mnemonicParsing="false" onAction="#impostazioni" prefHeight="89.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #4863A0; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Impostazioni Gestione Autostrade" textAlignment="CENTER" textFill="#4863a0" wrapText="true">
+		<Button fx:id="bottone_impostazioni" layoutX="188.0" layoutY="371.0" mnemonicParsing="false" onAction="#impostazioni" prefHeight="89.0" prefWidth="248.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #4863A0; -fx-border-width: 5; -fx-background-color: #ffffff;" text="Impostazioni Gestione Autostrade" textAlignment="CENTER" textFill="#4863a0" wrapText="true">
 			<font>
 				<Font name="Calibri Bold" size="20.0" />
 			</font>
 		</Button>
+      <Label layoutX="14.0" layoutY="138.0" text="Accesso effettuto come: " textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="138.0" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>
