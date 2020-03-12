@@ -56,25 +56,27 @@
                   <TextField fx:id="txttariffa" layoutX="14.0" layoutY="69.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci la tariffa della nuova autostrada" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="162.0" prefWidth="567.0" style="-fx-background-color: #ffffff;">
                <children>
                   <Label layoutX="14.0" layoutY="3.0" text="Caselli" textFill="#4863a0">
                      <font>
                         <Font name="Calibri Bold Italic" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtcasello" layoutX="17.0" layoutY="45.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci il Casello da Aggiungere" />
-                  <Button fx:id="bottone_aggiungiCasello" layoutX="69.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Casello" textFill="WHITE">
+                  <TextField fx:id="txtcasello" layoutX="14.0" layoutY="30.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci il Casello da Aggiungere" />
+                  <Button fx:id="bottone_aggiungiCasello" layoutX="69.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4AA02C;" text="Aggiungi Casello" textFill="WHITE">
                      <font>
                         <Font name="Calibri Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bottone_eliminaCasello" layoutX="348.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Casello" textFill="WHITE">
+                  <Button fx:id="bottone_eliminaCasello" layoutX="348.0" layoutY="102.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: cc0000;" text="Elimina Casello" textFill="WHITE">
                      <font>
                         <Font name="Calibri Bold" size="15.0" />
                      </font>
                   </Button>
                   <ComboBox fx:id="combocasello" layoutX="297.0" layoutY="45.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli il Casello da Eliminare" />
+                  <TextField fx:id="txtcasello1" layoutX="15.0" layoutY="65.0" prefHeight="31.0" prefWidth="151.0" promptText="Autostrfa di riferimento" />
+                  <TextField fx:id="txtcasello11" layoutX="176.0" layoutY="65.0" prefHeight="31.0" prefWidth="100.0" promptText="Km" />
                </children>
             </AnchorPane>
         </items>
