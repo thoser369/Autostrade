@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MySqlConnessione extends Connessione{
+public class MySqlConnessione{
 	
 	public static Connection createConnection() {
        	Connection cn = null;
