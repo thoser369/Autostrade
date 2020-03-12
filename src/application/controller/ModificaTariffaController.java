@@ -21,7 +21,12 @@ public class ModificaTariffaController {
 		public boolean modifica_tariffa(String nome, float tariffa) {
 			return daotariffa.modifica_tariffa(nome, tariffa);
 		}
-		
+		public Tariffa getIDclasseveicolo(String classev) {
+			return daotariffa.getIDclasseveicolo(classev);
+		}
+		public Tariffa getIDclasseambientale(String classea) {
+			return daotariffa.getIDclasseambientale(classea);
+		}
 		
 		
 }

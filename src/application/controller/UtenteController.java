@@ -26,5 +26,8 @@ public class UtenteController {
 		public boolean verifica_utente_password(String utente, String password) {
 			return daoutente.verifica_utente_password(utente, password);
 		}
+		public Utente getIDUtente(String username) {
+			return daoutente.getIDUtente(username);
+		}
 	
 }

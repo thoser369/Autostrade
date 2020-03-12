@@ -12,5 +12,7 @@ public interface DAOUtente {
 	
 	public boolean verifica_utente_password(String utente, String passowrd);
 	
+	public Utente getIDUtente(String username);
+	
 
 }

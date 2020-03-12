@@ -3,12 +3,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//import java.sql.Statement;
 
-import application.model.*;
+import application.model.Utente;
 
 public class MySqlUtente implements DAOUtente {
 	
+	private static final String ID_UTENTE= "SELECT ID FROM utente WHERE username=?";
 	private static final String DATI_LOGIN= "SELECT * FROM utente WHERE username=? and password=?";
 	private static final String DATI_REGISTRAZIONE="insert into utente(ID,nome,cognome,username,password,tipo) values (null,?,?,?,?,?);";
 	private static final String VERIFICA_UTENTE="SELECT * FROM utente WHERE username=?";
@@ -100,5 +100,26 @@ public class MySqlUtente implements DAOUtente {
 		return false;
 	} 
 	return login;
+	}
+	@Override
+	public Utente getIDUtente(String username) {
+		Utente utente=new Utente();
+		Connection cn=null;
+		PreparedStatement pst=null;
+		ResultSet rst=null;	
+		cn=MySqlConnessione.createConnection();
+		try {
+			pst=cn.prepareStatement(ID_UTENTE);
+			pst.setString(1, username);
+			rst=pst.executeQuery();
+			if (rst.next()){
+				utente.setId(rst.getInt("id"));
+		} 
+			cn.close();
+			}catch (SQLException e)	{
+			e.printStackTrace();
+		} 
+		
+		return utente;
 	}
 }

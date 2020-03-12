@@ -19,22 +19,15 @@ public class VeicoloController {
 		}
 		
 		public boolean aggiungi_veicolo(int idutente, int idclasseveicolo, int idclasseambientale,
-				String modello, String marca, String targa, String peso, String anno,
+				String modello, String marca, String targa, int peso, int anno,
 				int altezza, String assi) {
 			 return daoveicolo.aggiungi_veicolo(idutente,idclasseveicolo,idclasseambientale,modello,
 					 marca,targa,peso,anno,altezza,assi);
 		}
-		public int getIDUtente(String username) {
-			return daoveicolo.getIDUtente(username);
-		}
+		
 		public boolean verifica_presenza_veicolo(String targa) {
 			return daoveicolo.verifica_presenza_veicolo(targa);
 		}
-		public int getIDclasseveicolo(String classev) {
-			return daoveicolo.getIDclasseveicolo(classev);
-		}
-		public int getIDclasseambientale(String classea) {
-			return daoveicolo.getIDclasseambientale(classea);
-		}
+		
 
 }

@@ -11,7 +11,8 @@ public class MySqlTariffa implements DAOTariffa{
 	
 	private static final String DATI_TARIFFA= "SELECT * FROM classe_ambientale WHERE nome=?";
 	private static final String MODIFICA_TARIFFA="UPDATE classe_ambientale SET tariffa=? WHERE nome=?";
-
+	private static final String ID_CLASSE_VEICOLO= "SELECT ID FROM classe_veicolo WHERE nome=?";
+	private static final String ID_CLASSE_AMBIENTALE= "SELECT ID FROM classe_ambientale WHERE nome=?";
 
 	@Override
 	public Tariffa getTariffa(String nome) {
@@ -56,6 +57,50 @@ public class MySqlTariffa implements DAOTariffa{
 		} 
 		if(risultato==1) return true;
 		return false;
+	}
+
+	@Override
+	public Tariffa getIDclasseveicolo(String classev) {
+		Tariffa tariffa= new Tariffa();
+		Connection cn=null;
+		PreparedStatement pst=null;
+		ResultSet rst=null;	
+		cn=MySqlConnessione.createConnection();
+		try {
+			pst=cn.prepareStatement(ID_CLASSE_VEICOLO);
+			pst.setString(1, classev);
+			rst=pst.executeQuery();
+			if (rst.next()){
+				tariffa.setId(rst.getInt("id"));
+		} 
+			cn.close();
+			}catch (SQLException e)	{
+			e.printStackTrace();
+		} 
+		
+		return tariffa;
+	}
+
+	@Override
+	public Tariffa getIDclasseambientale(String classea) {
+		Tariffa tariffa= new Tariffa();
+		Connection cn=null;
+		PreparedStatement pst=null;
+		ResultSet rst=null;	
+		cn=MySqlConnessione.createConnection();
+		try {
+			pst=cn.prepareStatement(ID_CLASSE_AMBIENTALE);
+			pst.setString(1, classea);
+			rst=pst.executeQuery();
+			if (rst.next()){
+				tariffa.setId(rst.getInt("id"));
+		} 
+			cn.close();
+			}catch (SQLException e)	{
+			e.printStackTrace();
+		} 
+		
+		return tariffa;
 	}
 
 	

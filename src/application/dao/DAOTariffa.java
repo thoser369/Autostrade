@@ -8,5 +8,8 @@ public interface DAOTariffa {
 	
 	public boolean modifica_tariffa(String nome, float tariffa);
 	
+	public Tariffa getIDclasseveicolo(String classev);
+	
+	public Tariffa getIDclasseambientale(String classea);
 
 }

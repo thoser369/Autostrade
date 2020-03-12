@@ -1,7 +1,8 @@
 package application.model;
 
 public class Veicolo {
-
+    
+	int id;
 	String modello;
 	String marca;
 	String targa;
@@ -13,6 +14,12 @@ public class Veicolo {
 	public Veicolo() {
 		// TODO Auto-generated constructor stub
 	}
+	public int getId() {
+		return this.id;
+	}
+	public int setId(int n) {
+		return this.id=n;
+	}	
 	public String getModello() {
 		return this.modello;
 	}

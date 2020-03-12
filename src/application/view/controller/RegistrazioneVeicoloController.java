@@ -2,6 +2,8 @@ package application.view.controller;
 
 import java.io.IOException;
 
+import application.controller.ModificaTariffaController;
+import application.controller.UtenteController;
 import application.controller.VeicoloController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -170,11 +172,11 @@ public class RegistrazioneVeicoloController {
 			      txtanno.setStyle("-fx-border-color:  #4AA02C");
 			      txttarga.setStyle("-fx-border-color:  #4AA02C");
 			      //aggiunta nuovo veicolo
-			      rvc.aggiungi_veicolo(VeicoloController.getInstance().getIDUtente(HomeUtenteController.utente), 
-			    		  VeicoloController.getInstance().getIDclasseveicolo(classe_veicolo.getText()),
-			    		  VeicoloController.getInstance().getIDclasseambientale(classe_ambientale.getText()),
+			      rvc.aggiungi_veicolo(UtenteController.getInstance().getIDUtente(HomeUtenteController.utente).getId(), 
+			    		  ModificaTariffaController.getInstance().getIDclasseveicolo(classe_veicolo.getText()).getId(),
+			    		  ModificaTariffaController.getInstance().getIDclasseambientale(classe_ambientale.getText()).getId(),
 			    		  txtmodello.getText(), txtmarca.getText(), txttarga.getText(), 
-			    		  txtpeso.getText(), txtanno.getText(), Integer.parseInt(txtaltezza.getText()), txtassi.getText());
+			    		  Integer.parseInt(txtpeso.getText()), Integer.parseInt(txtanno.getText()), Integer.parseInt(txtaltezza.getText()), txtassi.getText());
 			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione del veicolo avvenuta correttamente.");
 			      alert.showAndWait();
 			      //passaggio alla view home

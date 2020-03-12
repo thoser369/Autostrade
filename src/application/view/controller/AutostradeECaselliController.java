@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class AutostradeECaselliController {
 
-    @FXML
+	@FXML
     private Button bottone_indietro;
 
     @FXML
@@ -44,6 +44,32 @@ public class AutostradeECaselliController {
 
     @FXML
     private ComboBox<?> combocasello;
+
+    @FXML
+    private TextField txtRiferimentoAutostrada;
+
+    @FXML
+    private TextField txtkm;
+
+    @FXML
+    void aggiungi_autostrada(ActionEvent event) {
+
+    }
+
+    @FXML
+    void aggiungi_casello(ActionEvent event) {
+
+    }
+
+    @FXML
+    void elimina_autostrada(ActionEvent event) {
+
+    }
+
+    @FXML
+    void elimina_casello(ActionEvent event) {
+
+    }
 
     @FXML
     void indietro(ActionEvent event) throws IOException {
