@@ -6,10 +6,9 @@ public class Veicolo {
 	String marca;
 	String targa;
 	String assi;
-	String peso;
-	String anno;
+	int peso;
+	int anno;
     int altezza;
-	float tariffa_unitaria;
 
 	public Veicolo() {
 		// TODO Auto-generated constructor stub
@@ -38,16 +37,16 @@ public class Veicolo {
 	public String setAssi(String n) {
 		return this.assi=n;
 	}
-	public String getPeso() {
+	public int getPeso() {
 		return this.peso;
 	}
-	public String setPeso(String n) {
+	public int setPeso(int n) {
 		return this.peso=n;
 	}
-	public String getAnno() {
+	public int getAnno() {
 		return this.anno;
 	}
-	public String seAnno(String n) {
+	public int seAnno(int n) {
 		return this.anno=n;
 	}
 	public int getAltezza() {
@@ -56,11 +55,6 @@ public class Veicolo {
 	public int setAltezza(int n) {
 		return this.altezza=n;
 	}
-	public float getTariffaUnitaria() {
-		return this.tariffa_unitaria;
-	}
-	public float setTariffaUnitaria(float n) {
-		return this.tariffa_unitaria=n;
-	}
+
 	
 }

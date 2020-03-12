@@ -5,9 +5,6 @@ public class Utente {
 	int id;
 	String nome;
 	String cognome;
-	String genere;
-	String citta_nascita;
-	String data_nascita;
 	String username;
 	String password;
 	String tipo;
@@ -34,24 +31,6 @@ public class Utente {
     }
     public String setCognome(String n) {
 	    return this.cognome=n;
-    }
-    public String getGenere() {
-	    return this.genere;
-    }
-    public String setGenere(String n) {
-	    return this.genere=n;
-    }
-     public String getCittaNascita() {
-	    return this.citta_nascita;
-    }
-    public String setCittaNascita(String n) {
-	    return this.citta_nascita=n;
-    }
-    public String getDataNascita() {
-	    return this.data_nascita;
-    }
-    public String setDataNascita(String n) {
-	    return this.data_nascita=n;
     }
     public String getUserName() {
 	    return this.username;

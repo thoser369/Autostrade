@@ -4,7 +4,6 @@ public class Casello {
 
 	String nome;
 	int km;
-	String citta;
 
 	public Casello() {
 		// TODO Auto-generated constructor stub
@@ -22,10 +21,5 @@ public class Casello {
 	public int setKm(int n) {
 		return this.km=n;
 	}
-	public String getCitta() {
-		return this.citta;
-	}
-	public String setCitta(String n) {
-		return this.citta=n;
-	}
+
 }
