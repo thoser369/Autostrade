@@ -52,7 +52,7 @@
                         <Font name="Calibri Bold" size="15.0" />
                      </font>
                   </Button>
-                  <ComboBox fx:id="comboautostrada" layoutX="297.0" layoutY="33.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli L'Autostrada da Eliminare" />
+                  <ComboBox fx:id="comboautostrada" layoutX="297.0" layoutY="33.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli l'autostrada da eliminare" />
                   <TextField fx:id="txttariffa" layoutX="14.0" layoutY="69.0" prefHeight="31.0" prefWidth="262.0" promptText="Inserisci la tariffa della nuova autostrada" />
                </children>
             </AnchorPane>
