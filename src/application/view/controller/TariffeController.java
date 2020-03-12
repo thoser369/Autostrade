@@ -87,12 +87,12 @@ public class TariffeController {
     		Alert alert = new Alert(AlertType.ERROR, "Selezionare la classe ambientale e immettere l'importo della nuova tariffa per quella classe.");
 		    alert.showAndWait();
     	}
-    	else {
+    	else { //controllo importo tariffa
     		if (ModificaTariffaController.getInstance().getTariffa(classe_ambientale.getText()).getTariffa()==(Float.parseFloat(txtnome.getText()))) {
     			Alert alert = new Alert(AlertType.ERROR, "E' già applicato questo importo per questa classe ambientale.");
     		    alert.showAndWait();
     		}
-    		else {
+    		else { //modifica tariffa
     			ModificaTariffaController.getInstance().modifica_tariffa(classe_ambientale.getText(), Float.parseFloat(txtnome.getText()));
     			Alert alert = new Alert(AlertType.CONFIRMATION, "Il nuovo importo è stato impostato.");
     		    alert.showAndWait();

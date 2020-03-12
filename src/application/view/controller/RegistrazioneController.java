@@ -66,7 +66,7 @@ public class RegistrazioneController {
 			Alert alert = new Alert(AlertType.ERROR, "Le due password non corrispondono. Riprovare.");
 			alert.showAndWait();
 		}
-    	//verifica utente registrato e/o inserimento utente
+    	//verifica campo username e/o inserimento utente
     	else { 
     		if(!uc.verifica_utente(username)){
     		      txtnome.setStyle("-fx-border-color:  #4AA02C");
@@ -74,9 +74,11 @@ public class RegistrazioneController {
 			      txtusername.setStyle("-fx-border-color:  #4AA02C");
 			      txtpwd1.setStyle("-fx-border-color:  #4AA02C");
 			      txtpwd2.setStyle("-fx-border-color:  #4AA02C");
+			      //inserimento utente
     	          uc.registrazione(nome, cognome, username, password);
 			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione avvenuta correttamente. Accedere per continuare.");
 			      alert.showAndWait();
+			      //passaggio view Login
     	          ((Node)event.getSource()).getScene().getWindow().hide(); 
     	  		  Stage primaryStage = new Stage();
     	  		  FXMLLoader loader = new FXMLLoader();

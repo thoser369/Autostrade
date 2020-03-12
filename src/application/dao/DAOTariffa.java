@@ -8,8 +8,5 @@ public interface DAOTariffa {
 	
 	public boolean modifica_tariffa(String nome, float tariffa);
 	
-	public String getGestione();
-	
-	public boolean modifica_gestione(String gestione);
 
 }

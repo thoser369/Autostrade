@@ -152,14 +152,15 @@ public class RegistrazioneVeicoloController {
     		Alert alert = new Alert(AlertType.ERROR, "Riempire tutti i campi.");
 		    alert.showAndWait();
 		}
-    	else {
-    		if (classe_veicolo.getText().equals("Classe A")&& Integer.parseInt(txtaltezza.getText())<=130)
+    	else {  //Campo numero Assi
+    		if (classe_veicolo.getText().equals("Classe A"))
     			txtassi.setText("1");
-    		else if(classe_veicolo.getText().equals("Classe B")&& Integer.parseInt(txtaltezza.getText())>130)
+    		else if(classe_veicolo.getText().equals("Classe B"))
     			 txtassi.setText("2");
     		     else if(classe_veicolo.getText().equals("Classe 3")) txtassi.setText("3");
     		          else if(classe_veicolo.getText().equals("Classe 4")) txtassi.setText("4");
     		               else txtassi.setText("5 o piu");
+    		//Verifica presenza veicolo con parte grafica
     		if(!rvc.verifica_presenza_veicolo(txttarga.getText())) {
     			  txtmarca.setStyle("-fx-border-color:  #4AA02C");
 			      txtmodello.setStyle("-fx-border-color:  #4AA02C");
@@ -168,6 +169,7 @@ public class RegistrazioneVeicoloController {
 			      txtaltezza.setStyle("-fx-border-color:  #4AA02C");
 			      txtanno.setStyle("-fx-border-color:  #4AA02C");
 			      txttarga.setStyle("-fx-border-color:  #4AA02C");
+			      //aggiunta nuovo veicolo
 			      rvc.aggiungi_veicolo(VeicoloController.getInstance().getIDUtente(HomeUtenteController.utente), 
 			    		  VeicoloController.getInstance().getIDclasseveicolo(classe_veicolo.getText()),
 			    		  VeicoloController.getInstance().getIDclasseambientale(classe_ambientale.getText()),
@@ -175,6 +177,7 @@ public class RegistrazioneVeicoloController {
 			    		  txtpeso.getText(), txtanno.getText(), Integer.parseInt(txtaltezza.getText()), txtassi.getText());
 			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione del veicolo avvenuta correttamente.");
 			      alert.showAndWait();
+			      //passaggio alla view home
     	          ((Node)event.getSource()).getScene().getWindow().hide(); 
     	  		  Stage primaryStage = new Stage();
     	  		  FXMLLoader loader = new FXMLLoader();
@@ -182,7 +185,6 @@ public class RegistrazioneVeicoloController {
     	  		  Scene scene = new Scene(root);							
     	  		  primaryStage.setScene(scene);
     	  		  primaryStage.setTitle("Home");
-    	  		 // HomeUtenteController.label_username.setText(HomeUtenteController.utente);
     	  		  primaryStage.show();	
     		} else {
     			txttarga.setStyle("-fx-border-color: red");

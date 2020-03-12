@@ -2,7 +2,7 @@ package application.view.controller;
 
 import java.io.IOException;
 
-import application.controller.ModificaTariffaController;
+import application.controller.SceltaClassePedaggioController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,7 +63,7 @@ public class GestioneClassePedaggioController {
 		    }
     	
         else {
-    	ModificaTariffaController.getInstance().modifica_gestione(classe.getText());
+    	SceltaClassePedaggioController.getInstance().modifica_gestione(classe.getText());
     	Alert alert = new Alert(AlertType.CONFIRMATION, "Modifica avvenuta correttamente.");
 	    alert.showAndWait();
 	    initialize();
@@ -84,7 +84,7 @@ public class GestioneClassePedaggioController {
     }
     
     public void initialize() {
-    	txtclasse.setText(ModificaTariffaController.getInstance().getGestione());
+    	txtclasse.setText(SceltaClassePedaggioController.getInstance().getGestione().getNome());
     	if(txtclasse.getText().equals("Classe Unitaria")) {
     		label_classeunitaria.setVisible(true);
     		label_classeambientale.setVisible(false);

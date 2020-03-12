@@ -101,10 +101,4 @@ public class MySqlUtente implements DAOUtente {
 	} 
 	return login;
 	}
-   public void getA(String username, String pwd) {
-	   System.out.println("ciaoo");
-   }
-  // public boolean verifica_admin(String username) {
-//	   
- //  }
 }

@@ -17,10 +17,6 @@ public class UtenteController {
 		public Utente login(String username, String pwd) {
 			return daoutente.Login(username, pwd);
 		}
-		public void a(String username, String pwd) {
-			 daoutente.getA(username, pwd);
-			 //System.out.print("ciao");
-		}
 		public boolean registrazione(String nome, String cognome, String username, String pwd) {
 			 return daoutente.Registrazione(nome, cognome, username, pwd);
 		}

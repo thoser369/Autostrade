@@ -35,11 +35,8 @@ public class LoginController {
 
     @FXML
     void initialize(ActionEvent event) throws SQLException, IOException {
-    	String utente= utentefield.getText();
-    	String password=passwordfield.getText();
-    	if(uc.verifica_utente_password(utente, password)){
-    	/*String prova= */uc.login(utente, password)/*.getTipo()*/;
-    	//System.out.println(prova);
+    	if(uc.verifica_utente_password(utentefield.getText(), passwordfield.getText())){
+    	//passagio view home
     	((Node)event.getSource()).getScene().getWindow().hide(); 
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
@@ -48,9 +45,11 @@ public class LoginController {
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Home");
 		primaryStage.show();	
+		//settaggio label nome utente con passaggio di parametri
 	    HomeUtenteController controller = loader.<HomeUtenteController>getController();
-	    controller.passaggio_username(utente, password);
+	    controller.passaggio_username(utentefield.getText(), passwordfield.getText());
 	    } else {
+	    	//parte grafica 
 	    	utentefield.setStyle("-fx-border-color: red");
 	    	passwordfield.setStyle("-fx-border-color: red");
 	         Alert alert = new Alert(AlertType.ERROR, "Username o password errati. Riprovare.");
