@@ -17,7 +17,7 @@ public class MySqlClassePedaggio implements DAOClassePedaggio {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(GESTIONE_ATTUALE);
 			rst=pst.executeQuery();
@@ -36,7 +36,7 @@ public class MySqlClassePedaggio implements DAOClassePedaggio {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(MODIFICA_GESTIONE);
 			pst.setString(1,gestione);

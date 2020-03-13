@@ -18,7 +18,7 @@ public class MySqlVeicolo implements DAOVeicolo {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_VEICOLO);
 			pst.setString(1, targa);
@@ -39,7 +39,7 @@ public class MySqlVeicolo implements DAOVeicolo {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_VEICOLO);
 			pst.setString(1, targa);
@@ -63,7 +63,7 @@ public class MySqlVeicolo implements DAOVeicolo {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(AGGIUNGI_VEICOLO);
 			pst.setInt(1,idutente);

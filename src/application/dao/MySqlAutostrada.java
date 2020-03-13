@@ -23,7 +23,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_AUTOSTRADA);
 			pst.setString(1, nome);
@@ -45,7 +45,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(AGGIUNGI_AUTOSTRADA);
 			pst.setString(1,nome);
@@ -67,7 +67,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(ELIMINA_AUTOSTRADA);
 			pst.setString(1,nome);
@@ -89,7 +89,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(VERIFICA_AUTOSTRADA);
 			pst.setString(1, nome);
@@ -112,7 +112,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_AUTOSTRADE);
 			rst=pst.executeQuery();

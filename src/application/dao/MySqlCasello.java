@@ -12,6 +12,7 @@ public class MySqlCasello implements DAOCasello {
 	private static final String DATI_CASELLO= "SELECT * FROM casello WHERE nome=?";
 	private static final String AGGIUNGI_CASELLO="insert into casello(ID,ID_autostrada,nome,km) values (null,?,?,?)";
 	private static final String ELIMINA_CASELLO= "DELETE FROM casello WHERE nome=?";
+	private static final String ELIMINA_CASELLI= "DELETE FROM casello WHERE ID_autostrada=?";
 	private static final String DATI_CASELLI= "SELECT * FROM casello";
 
 	@Override
@@ -20,7 +21,7 @@ public class MySqlCasello implements DAOCasello {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_CASELLO);
 			pst.setString(1, nome);
@@ -44,7 +45,7 @@ public class MySqlCasello implements DAOCasello {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(AGGIUNGI_CASELLO);
 			pst.setInt(1,idautostrada);
@@ -67,7 +68,7 @@ public class MySqlCasello implements DAOCasello {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(ELIMINA_CASELLO);
 			pst.setString(1,nome);
@@ -89,7 +90,7 @@ public class MySqlCasello implements DAOCasello {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_CASELLI);
 			rst=pst.executeQuery();
@@ -101,6 +102,28 @@ public class MySqlCasello implements DAOCasello {
 		} 
 		
 		return caselli;
+	}
+
+
+	@Override
+	public boolean eliminaCaselli(int idautostrada) {
+		int risultato=0;
+    	Connection cn=null;
+    	PreparedStatement pst=null;
+		cn=Connessione.createConnection();
+		try {
+			pst=cn.prepareStatement(ELIMINA_CASELLI);
+			pst.setInt(1,idautostrada);
+			risultato=pst.executeUpdate();
+		
+		cn.close();
+		
+		} catch (SQLException e)	{
+			e.printStackTrace();
+			return false;
+		} 
+		if(risultato==1) return true;
+		return false;
 	}
 
 }

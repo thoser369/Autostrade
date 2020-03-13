@@ -26,6 +26,9 @@ public class CaselloController {
 	public boolean eliminaCasello(String nome) {
 		return daocasello.eliminaCasello(nome);
 	}
+	public boolean eliminaCaselli(int idautostrada) {
+		return daocasello.eliminaCaselli(idautostrada);
+	}
 	public ArrayList<String> getAllCaselli() {
 		return daocasello.getAllCaselli();
 	}

@@ -20,7 +20,7 @@ public class MySqlTariffa implements DAOTariffa{
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_TARIFFA);
 			pst.setString(1, nome);
@@ -42,7 +42,7 @@ public class MySqlTariffa implements DAOTariffa{
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(MODIFICA_TARIFFA);
 			pst.setFloat(1,tariffa);
@@ -65,7 +65,7 @@ public class MySqlTariffa implements DAOTariffa{
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(ID_CLASSE_VEICOLO);
 			pst.setString(1, classev);
@@ -87,7 +87,7 @@ public class MySqlTariffa implements DAOTariffa{
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(ID_CLASSE_AMBIENTALE);
 			pst.setString(1, classea);

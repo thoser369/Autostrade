@@ -128,8 +128,9 @@ public class AutostradeECaselliController {
 		    alert.showAndWait();
     	}
     	else {
-    			AutostradaController.getInstance().eliminaAutostrada(comboautostrada.getValue());
-    			Alert alert = new Alert(AlertType.CONFIRMATION, "L'autostrada è stata eliminata correttamente.");
+    		    CaselloController.getInstance().eliminaCaselli(AutostradaController.getInstance().getAutostrada(comboautostrada.getValue()).getId());
+    		    AutostradaController.getInstance().eliminaAutostrada(comboautostrada.getValue());
+    			Alert alert = new Alert(AlertType.CONFIRMATION, "L'autostrada con i relativi caselli è stata eliminata correttamente.");
     		    alert.showAndWait();
     		    initialize();
     		    comboautostrada.setValue(null);

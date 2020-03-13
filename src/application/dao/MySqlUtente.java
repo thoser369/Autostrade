@@ -19,7 +19,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_LOGIN);
 			pst.setString(1, username);
@@ -41,7 +41,7 @@ public class MySqlUtente implements DAOUtente {
 		int risultato=0;
     	Connection cn=null;
     	PreparedStatement pst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_REGISTRAZIONE);
 			pst.setString(1,nome);
@@ -65,7 +65,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(VERIFICA_UTENTE);
 			pst.setString(1, username);
@@ -85,7 +85,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
     	PreparedStatement pst=null;
 		ResultSet rst=null;
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(DATI_LOGIN);
 			pst.setString(1, utente);
@@ -107,7 +107,7 @@ public class MySqlUtente implements DAOUtente {
 		Connection cn=null;
 		PreparedStatement pst=null;
 		ResultSet rst=null;	
-		cn=MySqlConnessione.createConnection();
+		cn=Connessione.createConnection();
 		try {
 			pst=cn.prepareStatement(ID_UTENTE);
 			pst.setString(1, username);

@@ -12,6 +12,8 @@ public interface DAOCasello {
 	
 	public boolean eliminaCasello(String nome);
 	
+	public boolean eliminaCaselli(int idautostrada);
+	
 	public ArrayList<String> getAllCaselli();
 
 }

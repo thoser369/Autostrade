@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MySqlConnessione{
+public class Connessione{
 	
 	public static Connection createConnection() {
        	Connection cn = null;
@@ -19,7 +19,7 @@ public class MySqlConnessione{
         return cn;
     }
 
-	public MySqlConnessione() {
+	public Connessione() {
 		// TODO Auto-generated constructor stub
 	}
 
