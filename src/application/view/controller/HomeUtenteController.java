@@ -33,12 +33,18 @@ public class HomeUtenteController {
     @FXML
     private Button bottone_impostazioni;
     
+    @FXML
+    private Label tipo_utente;
+    
     public void initialize() {
     	
     	label_username.setText(HomeUtenteController.utente);
     	bottone_impostazioni.setVisible(false);
-    	if(HomeUtenteController.admin_loggato) 
+    	tipo_utente.setText("Utente");
+    	if(HomeUtenteController.admin_loggato) {
     		bottone_impostazioni.setVisible(true);
+    	    tipo_utente.setText("Amministratore");
+    	    }
     		
     }
    
@@ -101,10 +107,12 @@ public class HomeUtenteController {
       label_username.setText(HomeUtenteController.utente);
       if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("utente")) {
     	  bottone_impostazioni.setVisible(false);
+    	  tipo_utente.setText("Utente");
     	  }
       else {
     	  HomeUtenteController.admin_loggato= true;
-    	  bottone_impostazioni.setVisible(true);          
+    	  bottone_impostazioni.setVisible(true);  
+    	  tipo_utente.setText("Amministratore");
       }
     }
 }

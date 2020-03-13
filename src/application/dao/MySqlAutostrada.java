@@ -29,6 +29,7 @@ public class MySqlAutostrada implements DAOAutostrada {
 			pst.setString(1, nome);
 			rst=pst.executeQuery();
 			if (rst.next()){
+				autostrada.setId(rst.getInt("ID"));
 				autostrada.setNome(rst.getString("nome"));
 				autostrada.setTariffa(rst.getFloat("tariffa"));
 		}  
