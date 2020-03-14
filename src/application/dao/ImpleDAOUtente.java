@@ -26,6 +26,7 @@ public class ImpleDAOUtente implements DAOUtente {
 			pst.setString(2, pwd);
 			rst=pst.executeQuery();
 			if (rst.next()){
+				nuovoutente.setId(rst.getInt("ID"));
 				nuovoutente.setUsername(rst.getString("username"));
 				nuovoutente.setPassword(rst.getString("password"));	
 				nuovoutente.setTipo(rst.getString("tipo"));

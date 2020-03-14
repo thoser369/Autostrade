@@ -3,6 +3,8 @@ package application.model;
 public class Veicolo {
     
 	int id;
+	int id_classeveicolo;
+	int id_classeambientale;
 	String modello;
 	String marca;
 	String targa;
@@ -19,6 +21,18 @@ public class Veicolo {
 	}
 	public int setId(int n) {
 		return this.id=n;
+	}	
+	public int getId_classeveicolo() {
+		return this.id_classeveicolo;
+	}
+	public int setId_classeveicolo(int n) {
+		return this.id_classeveicolo=n;
+	}	
+	public int getId_classeambientale() {
+		return this.id_classeambientale;
+	}
+	public int setId_classeambientale(int n) {
+		return this.id_classeambientale=n;
 	}	
 	public String getModello() {
 		return this.modello;

@@ -51,8 +51,8 @@
 				<Image url="application/view/fxml/Logo.jpg" />
 			</image>
 		</ImageView>
-      <ComboBox layoutX="46.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI PARTENZA" />
-      <ComboBox layoutX="347.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI ARRIVO" />
-      <ComboBox layoutX="202.0" layoutY="196.0" prefHeight="44.0" prefWidth="259.0" promptText="VEICOLO" />
+      <ComboBox fx:id="combocasellopartenza" layoutX="46.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI PARTENZA" />
+      <ComboBox fx:id="combocaselloarrivo" layoutX="347.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI ARRIVO" />
+      <ComboBox fx:id="comboveicolo" layoutX="202.0" layoutY="196.0" prefHeight="44.0" prefWidth="259.0" promptText="VEICOLO" />
 	</children>
 </AnchorPane>

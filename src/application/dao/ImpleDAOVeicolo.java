@@ -24,6 +24,8 @@ public class ImpleDAOVeicolo implements DAOVeicolo {
 			pst.setString(1, targa);
 			rst=pst.executeQuery();
 			if (rst.next()){
+				veicolo.setId_classeveicolo(rst.getInt("ID_classe_veicolo"));
+				veicolo.setId_classeambientale(rst.getInt("ID_classe_ambientale"));
 				veicolo.setTarga(rst.getString("targa"));
 		} 
 			cn.close();}catch (SQLException e)	{
