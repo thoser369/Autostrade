@@ -65,7 +65,7 @@ public class CalcoloDelPedaggioController {
     @FXML
     void calcolo_pedaggio(ActionEvent event) {
     	
-    	int distanza=0;
+    	int distanza, iva=0;
     	float pedaggio, tariffaunitaria, tariffaambientale, tariffaautostrada=0;
     	
     	if(combocasellopartenza.getValue()==null|combocaselloarrivo.getValue()==null|comboveicolo.getValue()==null) {
@@ -80,13 +80,14 @@ public class CalcoloDelPedaggioController {
     		else {
     			distanza=(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getKm()) - 
     					(CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getKm());
+    			iva=SceltaClassePedaggioController.getInstance().getGestione().getIva();
     			if (distanza<0) distanza = distanza * (-1);
     			if(label_classe.getText().equals("Classe Unitaria")) {
     				tariffaunitaria=PedaggioController.getInstance().getTariffaVeicolo(VeicoloController.getInstance().getVeicolo(comboveicolo.getValue()).getId_classeveicolo()).getTariffa();
     				tariffaautostrada=PedaggioController.getInstance().getTariffaAutostrada(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId_autostrada()).getTariffa();
     				pedaggio= distanza * ( tariffaunitaria + tariffaautostrada);
     				//aggiunta iva 22%
-    				pedaggio= pedaggio + (pedaggio *22 / 100);
+    				pedaggio= pedaggio + (pedaggio *iva / 100);
     				pedaggio = (float) (Math.round(pedaggio * 100) / 100.0);
     				txtpedaggio.setText(Float.toString(pedaggio));
     			} else {

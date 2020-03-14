@@ -30,7 +30,7 @@ public class GestioneClassePedaggioController {
     private Button bottone_aggiorna;
 
     @FXML
-    private Label label_classeunitaria;
+    private Label label_classe;
 
     @FXML
     private MenuButton classe;
@@ -40,9 +40,15 @@ public class GestioneClassePedaggioController {
 
     @FXML
     private MenuItem classe_ambientale;
+    
+    @FXML
+    private TextField txtiva;
 
     @FXML
-    private Label label_classeambientale;
+    private Button bottone_applica;
+
+    @FXML
+    private TextField txtnuovaiva;
 
     @FXML
     void classe_ambientale_selezionata(ActionEvent event) {
@@ -85,13 +91,30 @@ public class GestioneClassePedaggioController {
     
     public void initialize() {
     	txtclasse.setText(SceltaClassePedaggioController.getInstance().getGestione().getNome());
+    	txtiva.setText(Integer.toString(SceltaClassePedaggioController.getInstance().getGestione().getIva()));
     	if(txtclasse.getText().equals("Classe Unitaria")) {
-    		label_classeunitaria.setVisible(true);
-    		label_classeambientale.setVisible(false);
+    		label_classe.setText("Si ricorda che dal 2021, nel conteggio, verranno valutate anche \r\n" + 
+    				"le classi ambientali di appartenenza a ciascun veicolo.");
     		} else {
-    			label_classeunitaria.setVisible(false);
-        		label_classeambientale.setVisible(true);
+    			label_classe.setText("I pedaggi verranno calcolati secondo il nuovo sistema\r\n" + 
+    					"(valutando anche le classi ambientali).");
     		}
+    }
+    @FXML
+    void aggiorna_iva(ActionEvent event) {
+    	 //controllo campo vuoto
+    	if(txtnuovaiva.getText().equals("")) {
+    		Alert alert = new Alert(AlertType.ERROR, "Selezionare il nuovo importo iva da applicare.");
+		    alert.showAndWait();
+		    }
+    	
+        else {
+    	SceltaClassePedaggioController.getInstance().modifica_iva(Integer.parseInt(txtnuovaiva.getText()));
+    	Alert alert = new Alert(AlertType.CONFIRMATION, "Modifica avvenuta correttamente.");
+	    alert.showAndWait();
+	    initialize();
+        }
+
     }
 
 }

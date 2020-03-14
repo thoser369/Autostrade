@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -32,27 +33,27 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtclasse" disable="true" layoutX="276.0" layoutY="109.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+      <TextField fx:id="txtclasse" disable="true" layoutX="321.0" layoutY="109.0" prefHeight="39.0" prefWidth="165.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="bottone_aggiorna" layoutX="342.0" layoutY="166.0" mnemonicParsing="false" onAction="#aggiorna_scelta" prefHeight="25.0" prefWidth="233.0" text="Aggiorna">
+      <Button fx:id="bottone_aggiorna" layoutX="312.0" layoutY="159.0" mnemonicParsing="false" onAction="#aggiorna_scelta" prefHeight="37.0" prefWidth="244.0" text="Aggiorna">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Button>
-      <Label fx:id="label_classeunitaria" layoutX="26.0" layoutY="248.0" prefHeight="96.0" prefWidth="589.0" text="Si ricorda che dal 2021, nel conteggio, verranno valutate anche &#10;le classi ambientali di appartenenza a ciascun veicolo.">
+      <Label fx:id="label_classe" layoutX="36.0" layoutY="331.0" prefHeight="89.0" prefWidth="589.0">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="102.0" layoutY="117.0" text="Classe in Uso:" textFill="#4863a0">
+      <Label layoutX="167.0" layoutY="117.0" text="Classe in Uso:" textFill="#4863a0">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
-      <MenuButton fx:id="classe" layoutX="60.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" text="Scegli classe">
+      <MenuButton fx:id="classe" layoutX="49.0" layoutY="159.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="244.0" text="Scegli classe">
         <items>
           <MenuItem fx:id="classe_unitaria" mnemonicParsing="false" onAction="#classe_unitaria_selezionata" text="Classe Unitaria" />
           <MenuItem fx:id="classe_ambientale" mnemonicParsing="false" onAction="#classe_ambientale_selezionata" text="Classe Ambientale" />
@@ -61,15 +62,36 @@
             <Font name="Calibri Bold" size="20.0" />
          </font>
       </MenuButton>
-      <Label fx:id="label_classeambientale" layoutX="26.0" layoutY="328.0" prefHeight="58.0" prefWidth="589.0" text="I pedaggi verranno calcolati secondo il nuovo sistema&#10;(valutando anche le classi ambientali).&#10;">
+      <Label layoutX="36.0" layoutY="317.0" text="I pedaggi verranno calcolati in base alla Classe (Unitaria o Ambientale) in uso. ">
          <font>
             <Font name="Calibri Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="235.0" text="I pedaggi verranno calcolati in base alla Classe (Unitaria o Ambientale) in uso. ">
+      <Label layoutX="166.0" layoutY="229.0" text="IVA applicata:" textFill="#4863a0">
          <font>
-            <Font name="Calibri Italic" size="18.0" />
+            <Font name="Calibri Bold" size="20.0" />
          </font>
       </Label>
+      <TextField fx:id="txtiva" disable="true" layoutX="318.0" layoutY="221.0" prefHeight="39.0" prefWidth="165.0" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="502.0" layoutY="229.0" text="\%" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="bottone_applica" layoutX="312.0" layoutY="270.0" mnemonicParsing="false" onAction="#aggiorna_iva" prefHeight="37.0" prefWidth="244.0" text="Applica Nuova IVA">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtnuovaiva" layoutX="49.0" layoutY="269.0" prefHeight="39.0" prefWidth="244.0" promptText="Inserire nuovo importo IVA" style="-fx-border-radius: 5; -fx-background-radius: 5;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Separator layoutY="203.0" prefHeight="12.0" prefWidth="640.0" />
    </children>
 </AnchorPane>

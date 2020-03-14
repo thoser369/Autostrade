@@ -22,5 +22,9 @@ public class SceltaClassePedaggioController {
 	public boolean modifica_gestione(String gestione) {
 		return daoclassepedaggio.modifica_gestione(gestione);
 	}
+	public boolean modifica_iva(int nuovaiva) {
+		return daoclassepedaggio.modifica_iva(nuovaiva);
+	}
+
 
 }

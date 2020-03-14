@@ -4,6 +4,7 @@ public class SceltaClassePedaggio {
 
 	int id;
 	String nome;
+	int iva;
 	
 	public SceltaClassePedaggio() {
 		// TODO Auto-generated constructor stub
@@ -20,4 +21,10 @@ public class SceltaClassePedaggio {
     public String setNome(String n) {
 	    return this.nome=n;
     }
+    public int getIva() {
+		return this.iva;
+	}
+	public int setIva(int n) {
+		return this.iva=n;
+	}	
 }
