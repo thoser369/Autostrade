@@ -1,11 +1,11 @@
 package application.controller;
 
-import application.dao.MySqlUtente;
+import application.dao.ImpleDAOUtente;
 import application.model.Utente;
 
 public class UtenteController {
 	
-	private MySqlUtente daoutente= new MySqlUtente();
+	private ImpleDAOUtente daoutente= new ImpleDAOUtente();
 
 	public UtenteController() {
 		// TODO Auto-generated constructor stub

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import application.model.Casello;
 
-public class MySqlCasello implements DAOCasello {
+public class ImpleDAOCasello implements DAOCasello {
 	private static final String DATI_CASELLO= "SELECT * FROM casello WHERE nome=?";
 	private static final String AGGIUNGI_CASELLO="insert into casello(ID,ID_autostrada,nome,km) values (null,?,?,?)";
 	private static final String ELIMINA_CASELLO= "DELETE FROM casello WHERE nome=?";

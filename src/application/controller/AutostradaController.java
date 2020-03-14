@@ -2,12 +2,12 @@ package application.controller;
 
 import java.util.ArrayList;
 
-import application.dao.Imple_DAOAutostrada;
+import application.dao.ImpleDAOAutostrada;
 import application.model.Autostrada;
 
 public class AutostradaController {
 
-	private Imple_DAOAutostrada daoautostrada= new Imple_DAOAutostrada();
+	private ImpleDAOAutostrada daoautostrada= new ImpleDAOAutostrada();
 	
 	public AutostradaController() {
 		// TODO Auto-generated constructor stub

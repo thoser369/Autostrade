@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import application.model.SceltaClassePedaggio;
 
-public class MySqlClassePedaggio implements DAOClassePedaggio {
+public class ImpleDAOClassePedaggio implements DAOClassePedaggio {
 	private static final String GESTIONE_ATTUALE="SELECT nome FROM gestione";
 	private static final String MODIFICA_GESTIONE="UPDATE gestione SET nome=?";
 

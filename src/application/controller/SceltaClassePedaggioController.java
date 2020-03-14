@@ -1,11 +1,11 @@
 package application.controller;
 
-import application.dao.MySqlClassePedaggio;
+import application.dao.ImpleDAOClassePedaggio;
 import application.model.SceltaClassePedaggio;
 
 public class SceltaClassePedaggioController {
 	
-	private MySqlClassePedaggio daoclassepedaggio= new MySqlClassePedaggio();
+	private ImpleDAOClassePedaggio daoclassepedaggio= new ImpleDAOClassePedaggio();
 
 	public SceltaClassePedaggioController() {
 		// TODO Auto-generated constructor stub

@@ -1,11 +1,11 @@
 package application.controller;
 
-import application.dao.MySqlVeicolo;
+import application.dao.ImpleDAOVeicolo;
 import application.model.Veicolo;
 
 public class VeicoloController {
 	
-	private MySqlVeicolo daoveicolo= new MySqlVeicolo();
+	private ImpleDAOVeicolo daoveicolo= new ImpleDAOVeicolo();
 
 	public VeicoloController() {
 		// TODO Auto-generated constructor stub

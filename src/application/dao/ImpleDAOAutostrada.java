@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import application.model.Autostrada;
 
-public class Imple_DAOAutostrada implements DAOAutostrada {
+public class ImpleDAOAutostrada implements DAOAutostrada {
 	
 	private static final String DATI_AUTOSTRADA= "SELECT * FROM autostrada WHERE nome=?";
 	private static final String AGGIUNGI_AUTOSTRADA="insert into autostrada(ID,nome,tariffa) values (null,?,?)";

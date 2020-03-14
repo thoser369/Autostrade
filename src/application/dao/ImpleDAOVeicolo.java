@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import application.model.Veicolo;
 
-public class MySqlVeicolo implements DAOVeicolo {
+public class ImpleDAOVeicolo implements DAOVeicolo {
 	
 	private static final String DATI_VEICOLO= "SELECT * FROM veicolo WHERE targa=?";
 	private static final String AGGIUNGI_VEICOLO= "insert into veicolo(ID,ID_utente,ID_classe_veicolo,ID_classe_ambientale,modello,marca,targa,peso,anno,altezza,assi) values (null,?,?,?,?,?,?,?,?,?,?);";

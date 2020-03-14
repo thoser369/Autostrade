@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import application.model.Tariffa;
 
-public class MySqlTariffa implements DAOTariffa{
+public class ImpleDAOTariffa implements DAOTariffa{
 	
 	private static final String DATI_TARIFFA= "SELECT * FROM classe_ambientale WHERE nome=?";
 	private static final String MODIFICA_TARIFFA="UPDATE classe_ambientale SET tariffa=? WHERE nome=?";

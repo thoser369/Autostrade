@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import application.model.Utente;
 
-public class MySqlUtente implements DAOUtente {
+public class ImpleDAOUtente implements DAOUtente {
 	
 	private static final String ID_UTENTE= "SELECT ID FROM utente WHERE username=?";
 	private static final String DATI_LOGIN= "SELECT * FROM utente WHERE username=? and password=?";

@@ -2,12 +2,12 @@ package application.controller;
 
 import java.util.ArrayList;
 
-import application.dao.MySqlCasello;
+import application.dao.ImpleDAOCasello;
 import application.model.Casello;
 
 public class CaselloController {
 	
-	private MySqlCasello daocasello= new MySqlCasello();
+	private ImpleDAOCasello daocasello= new ImpleDAOCasello();
 
 	public CaselloController() {
 		// TODO Auto-generated constructor stub

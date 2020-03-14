@@ -1,11 +1,11 @@
 package application.controller;
 
-import application.dao.MySqlTariffa;
+import application.dao.ImpleDAOTariffa;
 import application.model.Tariffa;
 
 public class ModificaTariffaController {
 	
-	private MySqlTariffa daotariffa= new MySqlTariffa();
+	private ImpleDAOTariffa daotariffa= new ImpleDAOTariffa();
 
 	public ModificaTariffaController() {
 		// TODO Auto-generated constructor stub
