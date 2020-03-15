@@ -25,9 +25,8 @@ public class VeicoloController {
 					 marca,targa,peso,anno,altezza,assi);
 		}
 		
-		public boolean verifica_presenza_veicolo(String targa) {
-			return daoveicolo.verifica_presenza_veicolo(targa);
+		public boolean verifica_veicolo(String targa) {
+			return daoveicolo.verifica_veicolo(targa);
 		}
-		
 
 }

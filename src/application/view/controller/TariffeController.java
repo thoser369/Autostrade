@@ -88,7 +88,7 @@ public class TariffeController {
 		    alert.showAndWait();
     	}
     	else { //controllo importo tariffa
-    		if (ModificaTariffaController.getInstance().getTariffa(classe_ambientale.getText()).getTariffa()==(Float.parseFloat(txtnome.getText()))) {
+    		if (ModificaTariffaController.getInstance().getTariffaAmbientale(classe_ambientale.getText()).getTariffa()==(Float.parseFloat(txtnome.getText()))) {
     			Alert alert = new Alert(AlertType.ERROR, "E' già applicato questo importo per questa classe ambientale.");
     		    alert.showAndWait();
     		}

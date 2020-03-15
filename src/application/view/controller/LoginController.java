@@ -47,7 +47,7 @@ public class LoginController {
 		primaryStage.show();	
 		//settaggio label nome utente con passaggio di parametri
 	    HomeUtenteController controller = loader.<HomeUtenteController>getController();
-	    controller.passaggio_username(utentefield.getText(), passwordfield.getText());
+	    controller.passaggio_username(utentefield.getText());
 	    } else {
 	    	//parte grafica 
 	    	utentefield.setStyle("-fx-border-color: red");

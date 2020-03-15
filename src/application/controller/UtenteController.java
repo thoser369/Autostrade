@@ -14,20 +14,18 @@ public class UtenteController {
 		return new UtenteController();
 		}
 		
-		public Utente login(String username, String pwd) {
-			return daoutente.Login(username, pwd);
+		public Utente utente(String username) {
+			return daoutente.utente(username);
 		}
 		public boolean registrazione(String nome, String cognome, String username, String pwd) {
 			 return daoutente.Registrazione(nome, cognome, username, pwd);
 		}
-		public boolean verifica_utente(String username) {
-			return daoutente.verifica_utente(username);
-		}
 		public boolean verifica_utente_password(String utente, String password) {
 			return daoutente.verifica_utente_password(utente, password);
 		}
-		public Utente getIDUtente(String username) {
-			return daoutente.getIDUtente(username);
+		public boolean verifica_utente(String username) {
+			return daoutente.verifica_utente(username);
 		}
+
 	
 }

@@ -2,9 +2,9 @@ package application.model;
 
 public class Tariffa {
 	
-	int id;
-	String nome;
-	float tariffa;
+	private int id;
+	private String nome;
+	private float tariffa;
 	
 	public Tariffa() {
 		// TODO Auto-generated constructor stub

@@ -24,40 +24,24 @@ public class ImpleDAOVeicolo implements DAOVeicolo {
 			pst.setString(1, targa);
 			rst=pst.executeQuery();
 			if (rst.next()){
+				veicolo.setId(rst.getInt("ID"));
 				veicolo.setId_classeveicolo(rst.getInt("ID_classe_veicolo"));
 				veicolo.setId_classeambientale(rst.getInt("ID_classe_ambientale"));
+				veicolo.setTarga(rst.getString("modello"));
+				veicolo.setTarga(rst.getString("marca"));
 				veicolo.setTarga(rst.getString("targa"));
-		} 
+				veicolo.setTarga(rst.getString("assi"));
+				veicolo.setPeso(rst.getInt("peso"));
+				veicolo.setPeso(rst.getInt("anno"));
+				veicolo.setPeso(rst.getInt("altezza"));
+		}
 			cn.close();}catch (SQLException e)	{
 			e.printStackTrace();
 		} 
 		
 		return veicolo;
 	}
-
-	@Override
-	public boolean verifica_presenza_veicolo(String targa) {
-		boolean veicolo_registrato=false;
-		Connection cn=null;
-    	PreparedStatement pst=null;
-		ResultSet rst=null;
-		cn=Connessione.createConnection();
-		try {
-			pst=cn.prepareStatement(DATI_VEICOLO);
-			pst.setString(1, targa);
-			rst=pst.executeQuery();
-			if (rst.next()) 
-				veicolo_registrato=true;
-			cn.close();
 	
-	} catch (SQLException e)	{
-		e.printStackTrace();
-		return false;
-	} 
-	return veicolo_registrato;
-	}
-
-
 	@Override
 	public boolean aggiungi_veicolo(int idutente, int idclasseveicolo, int idclasseambientale, 
 			String modello, String marca, String targa, int peso, int anno,
@@ -90,6 +74,25 @@ public class ImpleDAOVeicolo implements DAOVeicolo {
 		return false;
 	}
 
+	@Override
+	public boolean verifica_veicolo(String targa) {
+		boolean veicolo=false;
+		Connection cn=null;
+    	PreparedStatement pst=null;
+		ResultSet rst=null;
+		cn=Connessione.createConnection();
+		try {
+			pst=cn.prepareStatement(DATI_VEICOLO);
+			pst.setString(1, targa);
+			rst=pst.executeQuery();
+			if (rst.next()) 
+				veicolo=true;
+			cn.close();
 	
-
+	} catch (SQLException e)	{
+		e.printStackTrace();
+		return false;
+	} 
+	return veicolo;
+	}
 }

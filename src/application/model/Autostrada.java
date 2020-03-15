@@ -1,13 +1,10 @@
 package application.model;
 
-import java.util.ArrayList;
-
 public class Autostrada {
 	
-	int id;
-	String nome;
-	float tariffa;
-	 ArrayList<Casello> autostrada;
+    private	int id;
+    private String nome;
+    private float tariffa;
 	   
 		public Autostrada() {
 			// TODO Auto-generated constructor stub
@@ -30,11 +27,5 @@ public class Autostrada {
 	    public float setTariffa(float n) {
 		    return this.tariffa=n;
 	    }
-		public ArrayList<Casello> getAutostrada() {
-			return this.autostrada;
-		}
-		public ArrayList<Casello> setAutostrada(ArrayList<Casello> n) {
-			return this.autostrada=n;
-		}
 
 	}

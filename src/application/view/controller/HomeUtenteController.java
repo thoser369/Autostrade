@@ -15,12 +15,9 @@ import javafx.stage.Stage;
 
 public class HomeUtenteController {
 	
-	public static boolean admin_loggato=false;//visibilità bottone per admin
+	public static boolean admin_loggato=false;//variabile utilizzata per visibilità bottone impostazione per admin
 	public static String utente="";
-	public static String pwd="";
-	
-	
-
+		
     @FXML
     private Button bottone_pedaggio;
 
@@ -44,11 +41,9 @@ public class HomeUtenteController {
     	if(HomeUtenteController.admin_loggato) {
     		bottone_impostazioni.setVisible(true);
     	    tipo_utente.setText("Amministratore");
-    	    }
-    		
+    	    }   		
     }
    
-
     @FXML
     void impostazioni(ActionEvent event) throws IOException {
     	((Node)event.getSource()).getScene().getWindow().hide(); 
@@ -69,9 +64,7 @@ public class HomeUtenteController {
 		Scene scene = new Scene(root);							
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Registrazione Veicolo");
-		primaryStage.show();	
-    	
-
+		primaryStage.show();	 	
     }
 
     @FXML
@@ -97,15 +90,12 @@ public class HomeUtenteController {
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Login");
 		primaryStage.show();
-
-    }
-   
+    }  
     //passaggio di parametri (username)
-    public void passaggio_username(String utente, String pwd) {
+    public void passaggio_username(String utente) {
       HomeUtenteController.utente=utente;
-      HomeUtenteController.pwd=pwd;
       label_username.setText(HomeUtenteController.utente);
-      if(UtenteController.getInstance().login(utente, pwd).getTipo().equals("utente")) {
+      if(UtenteController.getInstance().utente(utente).getTipo().equals("utente")) {
     	  bottone_impostazioni.setVisible(false);
     	  tipo_utente.setText("Utente");
     	  }

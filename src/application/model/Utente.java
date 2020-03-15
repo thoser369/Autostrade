@@ -2,12 +2,12 @@ package application.model;
 
 public class Utente {
  
-	int id;
-	String nome;
-	String cognome;
-	String username;
-	String password;
-	String tipo;
+	private int id;
+	private String nome;
+	private String cognome;
+	private String username;
+	private String password;
+	private String tipo;
 	
 
 	public Utente() {

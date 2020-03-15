@@ -163,7 +163,7 @@ public class RegistrazioneVeicoloController {
     		          else if(classe_veicolo.getText().equals("Classe 4")) txtassi.setText("4");
     		               else txtassi.setText("5 o piu");
     		//Verifica presenza veicolo con parte grafica
-    		if(!rvc.verifica_presenza_veicolo(txttarga.getText())) {
+    		if(!rvc.verifica_veicolo(txttarga.getText())) {
     			  txtmarca.setStyle("-fx-border-color:  #4AA02C");
 			      txtmodello.setStyle("-fx-border-color:  #4AA02C");
 			      txtassi.setStyle("-fx-border-color:  #4AA02C");
@@ -172,9 +172,9 @@ public class RegistrazioneVeicoloController {
 			      txtanno.setStyle("-fx-border-color:  #4AA02C");
 			      txttarga.setStyle("-fx-border-color:  #4AA02C");
 			      //aggiunta nuovo veicolo
-			      rvc.aggiungi_veicolo(UtenteController.getInstance().getIDUtente(HomeUtenteController.utente).getId(), 
-			    		  ModificaTariffaController.getInstance().getIDclasseveicolo(classe_veicolo.getText()).getId(),
-			    		  ModificaTariffaController.getInstance().getIDclasseambientale(classe_ambientale.getText()).getId(),
+			      rvc.aggiungi_veicolo(UtenteController.getInstance().utente(HomeUtenteController.utente).getId(), 
+			    		  ModificaTariffaController.getInstance().getTariffaVeicolo(classe_veicolo.getText()).getId(),
+			    		  ModificaTariffaController.getInstance().getTariffaAmbientale(classe_ambientale.getText()).getId(),
 			    		  txtmodello.getText(), txtmarca.getText(), txttarga.getText(), 
 			    		  Integer.parseInt(txtpeso.getText()), Integer.parseInt(txtanno.getText()), Integer.parseInt(txtaltezza.getText()), txtassi.getText());
 			      Alert alert = new Alert(AlertType.CONFIRMATION, "Registrazione del veicolo avvenuta correttamente.");

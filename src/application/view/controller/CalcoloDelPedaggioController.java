@@ -6,7 +6,6 @@ import application.controller.CaselloController;
 import application.controller.PedaggioController;
 import application.controller.SceltaClassePedaggioController;
 import application.controller.UtenteController;
-import application.controller.VeicoloController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -52,56 +51,40 @@ public class CalcoloDelPedaggioController {
     public void initialize() {
     	elenco_caselli.setAll(CaselloController.getInstance().getAllCaselli());
     	elenco_caselli.sort(null);//viene mantenuto l'ordine naturale degli elementi
-    	elenco_veicoli.setAll(PedaggioController.getInstance().getAllTarghe(UtenteController.getInstance().login(HomeUtenteController.utente, HomeUtenteController.pwd).getId()));
+    	elenco_veicoli.setAll(PedaggioController.getInstance().getAllTarghe(UtenteController.getInstance().utente(HomeUtenteController.utente).getId()));
     	elenco_veicoli.sort(null);//viene mantenuto l'ordine naturale degli elementi
+    	
     	combocasellopartenza.setItems(elenco_caselli);
     	combocaselloarrivo.setItems(elenco_caselli);
     	comboveicolo.setItems(elenco_veicoli);
     	
-    	label_classe.setText(SceltaClassePedaggioController.getInstance().getGestione().getNome());
-    	
-    	
+    	label_classe.setText(SceltaClassePedaggioController.getInstance().getGestione().getNome());	
     }
     @FXML
     void calcolo_pedaggio(ActionEvent event) {
-    	
-    	int distanza, iva=0;
-    	float pedaggio, tariffaunitaria, tariffaambientale, tariffaautostrada=0;
     	
     	if(combocasellopartenza.getValue()==null|combocaselloarrivo.getValue()==null|comboveicolo.getValue()==null) {
     		Alert alert = new Alert(AlertType.ERROR, "Selezionare i caselli di partenza e di arrivo e la targa del veicolo per calcolare il pedaggio.");
 		    alert.showAndWait();
     	} else {
-    		if(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId_autostrada()!=
-    				CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getId_autostrada()) {
-    			Alert alert = new Alert(AlertType.ERROR, "I caselli selezionati si trovano su due autostrade differenti. Selezionare due caselli della stessa autostrada.");
+    		if(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getNome().equals(CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getNome())) {
+    			Alert alert = new Alert(AlertType.ERROR, "Selezionare due caselli diversi.");
     		    alert.showAndWait();
-    		}
-    		else {
-    			distanza=(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getKm()) - 
-    					(CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getKm());
-    			iva=SceltaClassePedaggioController.getInstance().getGestione().getIva();
-    			if (distanza<0) distanza = distanza * (-1);
-    			if(label_classe.getText().equals("Classe Unitaria")) {
-    				tariffaunitaria=PedaggioController.getInstance().getTariffaVeicolo(VeicoloController.getInstance().getVeicolo(comboveicolo.getValue()).getId_classeveicolo()).getTariffa();
-    				tariffaautostrada=PedaggioController.getInstance().getTariffaAutostrada(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId_autostrada()).getTariffa();
-    				pedaggio= distanza * ( tariffaunitaria + tariffaautostrada);
-    				//aggiunta iva 22%
-    				pedaggio= pedaggio + (pedaggio *iva / 100);
-    				pedaggio = (float) (Math.round(pedaggio * 100) / 100.0);
-    				txtpedaggio.setText(Float.toString(pedaggio));
-    			} else {
-    				tariffaunitaria=PedaggioController.getInstance().getTariffaVeicolo(VeicoloController.getInstance().getVeicolo(comboveicolo.getValue()).getId_classeveicolo()).getTariffa();
-    				tariffaambientale=PedaggioController.getInstance().getTariffaAmbientale(VeicoloController.getInstance().getVeicolo(comboveicolo.getValue()).getId_classeambientale()).getTariffa();
-    				pedaggio= distanza * ( tariffaunitaria + tariffaambientale);
-    				//aggiunta iva 22%
-    				pedaggio= pedaggio + (pedaggio *22 / 100);
-    				pedaggio = (float) (Math.round(pedaggio * 100) / 100.0);
-    				txtpedaggio.setText(Float.toString(pedaggio));
-    			}
-    		}
-    	}
-
+    		} else {
+    		        if(CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId_autostrada()!=
+    				CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getId_autostrada()) {
+    			    Alert alert = new Alert(AlertType.ERROR, "I caselli selezionati si trovano su due autostrade differenti. Selezionare due caselli della stessa autostrada.");
+    		        alert.showAndWait();
+    		        } else {
+    			       txtpedaggio.setText(Float.toString(PedaggioController.getInstance().calcolo_pedaggio(combocasellopartenza.getValue(), combocaselloarrivo.getValue(), label_classe.getText(), comboveicolo.getValue())));
+    			       PedaggioController.getInstance().aggiungi_pedaggio_utente_autostrada(UtenteController.getInstance().utente(HomeUtenteController.utente).getId(), 
+    				    CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId_autostrada());
+    			       PedaggioController.getInstance().aggiungi_pedaggio_utente_casello(UtenteController.getInstance().utente(HomeUtenteController.utente).getId(), 
+    					CaselloController.getInstance().getCasello(combocasellopartenza.getValue()).getId(),
+    					CaselloController.getInstance().getCasello(combocaselloarrivo.getValue()).getId());
+    		          }
+    	      }
+    	  }
     }
 
     @FXML

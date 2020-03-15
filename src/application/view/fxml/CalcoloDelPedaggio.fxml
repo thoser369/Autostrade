@@ -54,5 +54,10 @@
       <ComboBox fx:id="combocasellopartenza" layoutX="46.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI PARTENZA" />
       <ComboBox fx:id="combocaselloarrivo" layoutX="347.0" layoutY="123.0" prefHeight="44.0" prefWidth="259.0" promptText="CASELLO DI ARRIVO" />
       <ComboBox fx:id="comboveicolo" layoutX="202.0" layoutY="196.0" prefHeight="44.0" prefWidth="259.0" promptText="VEICOLO" />
+      <Label layoutX="548.0" layoutY="349.0" text="€" textFill="#4863a0">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>

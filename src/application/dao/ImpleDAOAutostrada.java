@@ -13,7 +13,6 @@ public class ImpleDAOAutostrada implements DAOAutostrada {
 	private static final String DATI_AUTOSTRADA= "SELECT * FROM autostrada WHERE nome=?";
 	private static final String AGGIUNGI_AUTOSTRADA="insert into autostrada(ID,nome,tariffa) values (null,?,?)";
 	private static final String ELIMINA_AUTOSTRADA= "DELETE FROM autostrada WHERE nome=?";
-	private static final String VERIFICA_AUTOSTRADA= "SELECT * FROM autostrada WHERE nome=?";
 	private static final String DATI_AUTOSTRADE= "SELECT * FROM autostrada";
 	
 
@@ -32,7 +31,7 @@ public class ImpleDAOAutostrada implements DAOAutostrada {
 				autostrada.setId(rst.getInt("ID"));
 				autostrada.setNome(rst.getString("nome"));
 				autostrada.setTariffa(rst.getFloat("tariffa"));
-		}  
+		}  else autostrada.setNome("");
 			cn.close();}catch (SQLException e)	{
 			e.printStackTrace();
 		} 
@@ -91,7 +90,7 @@ public class ImpleDAOAutostrada implements DAOAutostrada {
 		ResultSet rst=null;
 		cn=Connessione.createConnection();
 		try {
-			pst=cn.prepareStatement(VERIFICA_AUTOSTRADA);
+			pst=cn.prepareStatement(DATI_AUTOSTRADA);
 			pst.setString(1, nome);
 			rst=pst.executeQuery();
 			if (rst.next()) 

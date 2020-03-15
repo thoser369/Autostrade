@@ -15,18 +15,13 @@ public class ModificaTariffaController {
 		return new ModificaTariffaController();
     }
 		
-		public Tariffa getTariffa(String nome) {
-			return daotariffa.getTariffa(nome);
+		public Tariffa getTariffaAmbientale(String classea) {
+			return daotariffa.getTariffaAmbientale(classea);
 		}
 		public boolean modifica_tariffa(String nome, float tariffa) {
 			return daotariffa.modifica_tariffa(nome, tariffa);
 		}
-		public Tariffa getIDclasseveicolo(String classev) {
-			return daotariffa.getIDclasseveicolo(classev);
+		public Tariffa getTariffaVeicolo(String classev) {
+			return daotariffa.getTariffaVeicolo(classev);
 		}
-		public Tariffa getIDclasseambientale(String classea) {
-			return daotariffa.getIDclasseambientale(classea);
-		}
-		
-		
 }

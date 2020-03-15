@@ -2,9 +2,9 @@ package application.model;
 
 public class SceltaClassePedaggio {
 
-	int id;
-	String nome;
-	int iva;
+	private int id;
+	private String nome;
+	private int iva;
 	
 	public SceltaClassePedaggio() {
 		// TODO Auto-generated constructor stub

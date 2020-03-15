@@ -14,4 +14,8 @@ public interface DAOPedaggio {
     public Tariffa getTariffaAmbientale(int idtariffa);
     
     public Autostrada getTariffaAutostrada(int idautostrada);
+    
+    public boolean aggiungi_pedaggio_utente_casello(int idutente, int idcasellopartenza, int idcaselloarrivo);
+    
+    public boolean aggiungi_pedaggio_utente_autostrada(int idutente, int idautostrada);
 }

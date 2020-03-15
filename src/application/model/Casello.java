@@ -1,10 +1,11 @@
 package application.model;
 
 public class Casello {
-    int id;
-    int Id_autostrada;
-	String nome;
-	int km;
+   
+	private int id;
+	private int Id_autostrada;
+	private String nome;
+	private int km;
 
 	public Casello() {
 		// TODO Auto-generated constructor stub

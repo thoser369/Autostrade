@@ -2,16 +2,16 @@ package application.model;
 
 public class Veicolo {
     
-	int id;
-	int id_classeveicolo;
-	int id_classeambientale;
-	String modello;
-	String marca;
-	String targa;
-	String assi;
-	int peso;
-	int anno;
-    int altezza;
+	private int id;
+	private int id_classeveicolo;
+	private int id_classeambientale;
+	private String modello;
+	private String marca;
+	private String targa;
+	private String assi;
+	private int peso;
+	private int anno;
+	private int altezza;
 
 	public Veicolo() {
 		// TODO Auto-generated constructor stub

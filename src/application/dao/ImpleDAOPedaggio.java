@@ -15,6 +15,8 @@ public class ImpleDAOPedaggio implements DAOPedaggio {
 	private static final String DATI_TARIFFA_VEICOLO= "SELECT * FROM classe_veicolo WHERE ID=?";
 	private static final String DATI_TARIFFA_AMBIENTALE= "SELECT * FROM classe_ambientale WHERE ID=?";
 	private static final String DATI_TARIFFA_AUTOSTRADA= "SELECT * FROM autostrada WHERE ID=?";
+	private static final String PEDAGGIO_UTENTE_CASELLO="insert into attraversare(ID,ID_utente,ID_casello_partenza,ID_casello_arrivo) values (null,?,?,?)";
+	private static final String PEDAGGIO_UTENTE_AUTOSTRADA="insert into percorrere(ID,ID_utente,ID_autostrada) values (null,?,?)";
 
 	@Override
 	public ArrayList<String> getAllTarghe(int idutente) {
@@ -102,6 +104,51 @@ public class ImpleDAOPedaggio implements DAOPedaggio {
 		} 
 		
 		return autostrada;
+	}
+
+	@Override
+	public boolean aggiungi_pedaggio_utente_casello(int idutente, int idcasellopartenza, int idcaselloarrivo) {
+		int risultato=0;
+    	Connection cn=null;
+    	PreparedStatement pst=null;
+		cn=Connessione.createConnection();
+		try {
+			pst=cn.prepareStatement(PEDAGGIO_UTENTE_CASELLO);
+			pst.setInt(1,idutente);
+			pst.setInt(2,idcasellopartenza);
+			pst.setInt(3,idcaselloarrivo);
+			risultato=pst.executeUpdate();
+		
+		cn.close();
+		
+		} catch (SQLException e)	{
+			e.printStackTrace();
+			return false;
+		} 
+		if(risultato==1) return true;
+		return false;
+	}
+
+	@Override
+	public boolean aggiungi_pedaggio_utente_autostrada(int idutente, int idautostrada) {
+		int risultato=0;
+    	Connection cn=null;
+    	PreparedStatement pst=null;
+		cn=Connessione.createConnection();
+		try {
+			pst=cn.prepareStatement(PEDAGGIO_UTENTE_AUTOSTRADA);
+			pst.setInt(1,idutente);
+			pst.setInt(2,idautostrada);
+			risultato=pst.executeUpdate();
+		
+		cn.close();
+		
+		} catch (SQLException e)	{
+			e.printStackTrace();
+			return false;
+		} 
+		if(risultato==1) return true;
+		return false;
 	}
 
 
