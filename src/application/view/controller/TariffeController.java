@@ -96,6 +96,7 @@ public class TariffeController {
     			ModificaTariffaController.getInstance().modifica_tariffa(classe_ambientale.getText(), Float.parseFloat(txtnome.getText()));
     			Alert alert = new Alert(AlertType.CONFIRMATION, "Il nuovo importo è stato impostato.");
     		    alert.showAndWait();
+    		    txtnome.setText("");
     		}
     		   
     	}

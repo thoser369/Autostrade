@@ -113,6 +113,7 @@ public class GestioneClassePedaggioController {
     	Alert alert = new Alert(AlertType.CONFIRMATION, "Modifica avvenuta correttamente.");
 	    alert.showAndWait();
 	    initialize();
+	    txtnuovaiva.setText("");
         }
 
     }
