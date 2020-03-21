@@ -75,8 +75,8 @@
                      </font>
                   </Button>
                   <ComboBox fx:id="combocasello" layoutX="297.0" layoutY="45.0" prefHeight="25.0" prefWidth="254.0" promptText="Scegli il Casello da Eliminare" />
-                  <TextField fx:id="txtRiferimentoAutostrada" layoutX="15.0" layoutY="65.0" prefHeight="31.0" prefWidth="151.0" promptText="Autostrada di riferimento" />
                   <TextField fx:id="txtkm" layoutX="176.0" layoutY="65.0" prefHeight="31.0" prefWidth="100.0" promptText="Km" />
+                  <ComboBox fx:id="combo_rifautostrada" layoutX="14.0" layoutY="65.0" prefHeight="31.0" prefWidth="151.0" promptText="Scegli l'autostrada di riferimento" />
                </children>
             </AnchorPane>
         </items>

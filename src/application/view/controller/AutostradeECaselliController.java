@@ -40,6 +40,9 @@ public class AutostradeECaselliController {
     private ComboBox<String> comboautostrada;
 
     @FXML
+    private ComboBox<String> combo_rifautostrada;
+
+    @FXML
     private TextField txttariffa;
 
     @FXML
@@ -55,15 +58,13 @@ public class AutostradeECaselliController {
     private ComboBox<String> combocasello;
 
     @FXML
-    private TextField txtRiferimentoAutostrada;
-
-    @FXML
     private TextField txtkm;
     
     public void initialize() {
     	elenco_autostrade.setAll(AutostradaController.getInstance().getAllAutostrade());
     	elenco_autostrade.sort(null);//viene mantenuto l'ordine naturale degli elementi
     	comboautostrada.setItems(elenco_autostrade);
+    	combo_rifautostrada.setItems(elenco_autostrade);
     	
     	elenco_caselli.setAll(CaselloController.getInstance().getAllCaselli());
     	elenco_caselli.sort(null);//viene mantenuto l'ordine naturale degli elementi
@@ -96,28 +97,22 @@ public class AutostradeECaselliController {
 
     @FXML
     void aggiungi_casello(ActionEvent event) {
-    	if(txtcasello.getText().equals("")|txtRiferimentoAutostrada.getText().equals("")|txtkm.getText().equals("")) {
+    	if(txtcasello.getText().equals("")|combo_rifautostrada.getValue()==null|txtkm.getText().equals("")) {
     		Alert alert = new Alert(AlertType.ERROR, "Inserire il casello da aggiungere con relativa autostrada e km di riferimento.");
 		    alert.showAndWait();
     	}
-    	else {
-    		if (!CaselloController.getInstance().getCasello(txtcasello.getText()).getNome().equals("")) {
+    	else if (!CaselloController.getInstance().getCasello(txtcasello.getText()).getNome().equals("")) {
     			Alert alert = new Alert(AlertType.ERROR, "Il casello inserito esiste già. Riprovare.");
     		    alert.showAndWait();
-    		} else if (!AutostradaController.getInstance().verificaAutostrada(txtRiferimentoAutostrada.getText())) {
-    			       Alert alert = new Alert(AlertType.ERROR, "L'Autostrada a cui fa riferimento il casello non esiste. Aggiungere prima l'autostrada e successivamente i relativi caselli.");
-    		           alert.showAndWait();
-    		       } else {
-    			           CaselloController.getInstance().aggiungiCasello(AutostradaController.getInstance().getAutostrada(txtRiferimentoAutostrada.getText()).getId(), txtcasello.getText(), Integer.parseInt(txtkm.getText()));
-    			           Alert alert = new Alert(AlertType.CONFIRMATION, "Il casello è stato inserito correttamente.");
-    		               alert.showAndWait();
-    		               initialize();
-    		               txtcasello.setText("");
-    		               txtRiferimentoAutostrada.setText("");
-    		               txtkm.setText("");
-    		          }
-    	}
-
+    		} else {
+    			    CaselloController.getInstance().aggiungiCasello(AutostradaController.getInstance().getAutostrada(combo_rifautostrada.getValue()).getId(), txtcasello.getText(), Integer.parseInt(txtkm.getText()));
+    			    Alert alert = new Alert(AlertType.CONFIRMATION, "Il casello è stato inserito correttamente.");
+    		        alert.showAndWait();
+    		        initialize();
+    		        txtcasello.setText("");
+    		        combo_rifautostrada.setValue(null);
+    		        txtkm.setText("");
+    		  }
     }
 
     @FXML
